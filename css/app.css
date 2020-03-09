@@ -863,3 +863,80 @@ section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.cor
         left: 10px;
     }
 }
+
+footer {
+    clear: both;
+    background-color: #1a1a1a;
+    padding: 100px 10px 40px 10px;
+}
+
+footer>ul.core>li {
+    width: 160px;
+
+}
+
+footer>ul.core>li>div.footerTitle {
+    font-family: "Lobster";
+    font-size: 20px;
+    line-height: 1.24;
+    color: #fff;
+}
+
+footer>ul.core>li>button.brand--primary--button {
+    margin-top: 20px;
+    width: 160px;
+    height: 52px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.57;
+    text-align: center;
+}
+
+footer>ul.core>li>ul.footerContent {
+    margin-top: 20px;
+}
+
+footer>ul.core>li>ul.footerContent>li {
+    margin: 10px;
+}
+
+footer>ul.core>li>ul.footerContent>li {
+    opacity: 0.5;
+    font-family: 'Open Sans';
+    font-size: 16px;
+    line-height: 1.63;
+    color: #fff;
+}
+
+footer>ul.core>li.socials {
+    width: 270px;
+}
+
+footer>div.bottom {
+    margin: 70px auto 0 auto;
+    width: 77%;
+    border-top: 1px solid #5f5f5f;
+    opacity: 0.5;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    padding: 35px 0;
+}
+
+@media screen and (min-width: 470px) and (max-width: 800px) {
+    footer>ul.core {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 50px 0;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    footer>ul.core {
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 50px 0;
+    }
+}
