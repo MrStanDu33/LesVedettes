@@ -15,68 +15,14 @@ body {
     min-height: 100vh;
 }
 
-header.mainHeader {
+div.altHeader {
     width: 100vw;
     z-index: 95;
     min-height: 100px;
     position: absolute;
 }
 
-header.mainHeader>nav.flex {
-    min-height: 100px;
-    width: 100%;
-    padding: 0 10%;
-}
-
-header.mainHeader>nav.flex>ul.pageLinks>li {
-    margin: 0 16px;
-}
-header.mainHeader>nav.flex>ul.pageLinks>li>a {
-    position: relative;
-    display: block;
-    font-family: Roboto;
-    font-size: 14px;
-    font-weight: 300;
-    text-align: center;
-    color: #fff;
-}
-
-header.mainHeader>nav.flex>ul.pageLinks>li>button.brand--primary--button {
-    padding: 10px 32px;
-}
-
-header.mainHeader>nav.flex>ul.pageLinks>li>a>div.bubble {
-    border-radius: 50%;
-    width: 18px;
-    height: 18px;
-    text-align: center;
-    line-height: 18px;
-    background-color: #14b1bc;
-    font-size: 12px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(50%, -50%);
-}
-
-header.mainHeader>nav.flex>ul.pageLinks>li>a>img.icon {
-    height: 19px;
-    width: 19px;
-    object-fit: contain;
-}
-
-div.altHeader {
-    position: fixed;
-    width: 100vw;
-    z-index: 5;
-    min-height: 100px;
-}
-
 div.altHeader>nav.flex {
-    background-color: #14b1bc;
-    -webkit-box-shadow: 0px 0px 10px 0px rgba(20,177,188,0.5);
-    -moz-box-shadow: 0px 0px 10px 0px rgba(20,177,188,0.5);
-    box-shadow: 0px 0px 10px 0px rgba(20,177,188,0.5);
     min-height: 100px;
     width: 100%;
     padding: 0 10%;
@@ -95,11 +41,65 @@ div.altHeader>nav.flex>ul.pageLinks>li>a {
     color: #fff;
 }
 
-div.altHeader>nav.flex>ul.pageLinks>li>button.brand--white--button {
+div.altHeader>nav.flex>ul.pageLinks>li>button.brand--primary--button {
     padding: 10px 32px;
 }
 
 div.altHeader>nav.flex>ul.pageLinks>li>a>div.bubble {
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    line-height: 18px;
+    background-color: #14b1bc;
+    font-size: 12px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+}
+
+div.altHeader>nav.flex>ul.pageLinks>li>a>img.icon {
+    height: 19px;
+    width: 19px;
+    object-fit: contain;
+}
+
+header.mainHeader {
+    position: fixed;
+    width: 100vw;
+    z-index: 5;
+    min-height: 100px;
+}
+
+header.mainHeader>nav.flex {
+    background-color: #14b1bc;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(20,177,188,0.5);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(20,177,188,0.5);
+    box-shadow: 0px 0px 10px 0px rgba(20,177,188,0.5);
+    min-height: 100px;
+    width: 100%;
+    padding: 0 10%;
+}
+
+header.mainHeader>nav.flex>ul.pageLinks>li {
+    margin: 0 16px;
+}
+header.mainHeader>nav.flex>ul.pageLinks>li>a {
+    position: relative;
+    display: block;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+    color: #fff;
+}
+
+header.mainHeader>nav.flex>ul.pageLinks>li>button.brand--white--button {
+    padding: 10px 32px;
+}
+
+header.mainHeader>nav.flex>ul.pageLinks>li>a>div.bubble {
     border-radius: 50%;
     width: 18px;
     height: 18px;
@@ -113,7 +113,7 @@ div.altHeader>nav.flex>ul.pageLinks>li>a>div.bubble {
     transform: translate(50%, -50%);
 }
 
-div.altHeader>nav.flex>ul.pageLinks>li>a>img.icon {
+header.mainHeader>nav.flex>ul.pageLinks>li>a>img.icon {
     height: 19px;
     width: 19px;
     object-fit: contain;

@@ -40,7 +40,7 @@ https://github.com/mrstandu33/LesVedettes
         <link href="/css/datepicker.min.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <header class="mainHeader">
+        <div class="altHeader">
             <nav class="flex row noWrap xSpaceBetween ySpaceBetween">
                 <img src="/assets/svg/logo.svg" alt="Logo"/>
                 <ul class="pageLinks flex row noWrap xSpaceEvenly yCenter">
@@ -81,8 +81,8 @@ https://github.com/mrstandu33/LesVedettes
                     </li>
                 </ul>
             </nav>
-        </header>
-        <div class="altHeader">
+        </div>
+        <header class="mainHeader">
             <nav class="flex row noWrap xSpaceBetween ySpaceBetween">
                 <img src="/assets/svg/logo.svg" alt="Logo"/>
                 <ul class="pageLinks flex row noWrap xSpaceEvenly yCenter">
@@ -123,7 +123,7 @@ https://github.com/mrstandu33/LesVedettes
                     </li>
                 </ul>
             </nav>
-        </div>
+        </header>
         <section class="slider">
             <img class="sliderBackground" src="https://source.unsplash.com/1920x1080/?beach,landscape" alt="homepage background"/>
             <div class="sliderContainer">
@@ -485,8 +485,18 @@ https://github.com/mrstandu33/LesVedettes
                     const book = document.getElementsByClassName('openDiscover')[0];
                     e.preventDefault();
                 })
+                document.querySelector('div.altHeader button.brand--primary--button').addEventListener('click', openResaForm);
+                document.querySelector('header.mainHeader button.brand--white--button').addEventListener('click', openResaForm);
+
                 const openResa = document.querySelector('footer button.openResaFooter');
-                openResa.addEventListener('click', (e) => {
+                openResa.addEventListener('click', openResaForm);
+
+                const goTopBtn = document.querySelector('.back_to_top');
+                window.addEventListener('scroll', trackScroll);
+                goTopBtn.addEventListener('click', backToTop);
+
+            })();
+            function openResaForm(e) {
                     e.preventDefault();
                     //TODO: replace URL
                     if (document.querySelector('form.serviceSearch').length === 0) return window.location.href = 'http://vedettes.localhost/';
@@ -498,13 +508,7 @@ https://github.com/mrstandu33/LesVedettes
                         const book = document.getElementsByClassName('openDiscover')[0];
                     }, 300);
                     return backToTop();
-                });
-
-                const goTopBtn = document.querySelector('.back_to_top');
-                window.addEventListener('scroll', trackScroll);
-                goTopBtn.addEventListener('click', backToTop);
-
-            })();
+            }
             function trackScroll() {
                 const goTopBtn = document.querySelector('.back_to_top');
                 var scrolled = window.pageYOffset;
