@@ -1,0 +1,383 @@
+<!--
+  _                __      __      _      _   _
+ | |               \ \    / /     | |    | | | |
+ | |     ___  ___   \ \  / /__  __| | ___| |_| |_ ___  ___
+ | |    / _ \/ __|   \ \/ / _ \/ _` |/ _ \ __| __/ _ \/ __|
+ | |___|  __/\__ \    \  /  __/ (_| |  __/ |_| ||  __/\__ \
+ |______\___||___/     \/ \___|\__,_|\___|\__|\__\___||___/
+https://github.com/mrstandu33/LesVedettes
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Les Vedettes</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="theme-color" content="#14b1bc" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
+
+        <meta property="og:locale" content="fr_FR" />
+        <meta property="og:title" content="Les Vedettes" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Les Vedettes" />
+
+        <meta name="geo.region" content="FR" />
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Les Vedettes" />
+
+        <link rel="canonical" href="{{ url('/') }}" />
+        <link rel="alternate" hreflang="fr" href="{{ url('/') }}" />
+        <link rel="stylesheet" href="/css/framework.css" />
+        <link rel="stylesheet" href="/css/app.css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css">
+        <!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.helper.ie8.js"></script><![endif]-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <link href="/css/datepicker.min.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="headerBackground"></div>
+        <header class="mainHeader">
+            <nav class="flex row noWrap xSpaceBetween ySpaceBetween">
+                <img src="/assets/svg/logo.svg" alt="Logo"/>
+                <ul class="pageLinks flex row noWrap xSpaceEvenly yCenter">
+                    <li>
+                        <a href="">Accueil</a>
+                    </li>
+                    <li>
+                        <a href="">À propos</a>
+                    </li>
+                    <li>
+                        <a href="">Prestations</a>
+                    </li>
+                    <li>
+                        <a href="">Produits</a>
+                    </li>
+                    <li>
+                        <a href="">Galerie</a>
+                    </li>
+                    <li>
+                        <a href="">Contact</a>
+                    </li>
+                    <li>
+                        <a href="">Offre Pro</a>
+                    </li>
+                    <li>
+                        <button class="brand--primary--button pointer">Réserver</button>
+                    </li>
+                    <li>
+                        <a href="/connect">
+                            <img class="icon" src="/assets/svg/user.svg" alt="profile icon" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/cart">
+                            <div class="bubble">4</div>
+                            <img class="icon" src="assets/svg/shoppingCart.svg" alt="cart icon" />
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section class="slider">
+            <img class="sliderBackground" src="https://source.unsplash.com/1920x1080/?beach,landscape" alt="homepage background"/>
+            <div class="sliderContainer">
+                <h1 class="pageTitle">Faites l’expérience du bassin d’arcachon, en Vedette</h1>
+                <div class="relative">
+                    <form class="serviceSearch" action="/" method="GET">
+                        <button class="openDiscover brand--primary--button pointer">Découvrir !</button>
+                        <select id="persons" class="persons" name="persons">
+                            <option selected hidden disabled>Nb de personnes</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="plus ...">plus ...</option>
+                        </select>
+                        <input
+                            name="date"
+                            type="text"
+                            placeholder="Dates"
+                            class="datepicker-here"
+                            data-language='fr'
+                            data-position='top left'/>
+                        <select name="service" class="services">
+                            <option selected hidden disabled>Type location</option>
+                        </select>
+                    </form>
+                </div>
+                <ul class="cards">
+                    <li>
+                        <div class="placeholderCard card">
+                            <div class="basic">
+                                <div class="core">
+                                    <h2 class="serviceName">Explorez toutes <br/>nos expériences</h2>
+                                    <span class="additional">Recherchez parmi vos préférences le service idéal et adapté à vos envies</span>
+                                    <button class="brand--primary--button pointer">Rechercher<img class="arrow" src="/assets/svg/arrow-right.svg" alt="choisir une date"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="servicesContainer">
+            <ul class="servicesList block">
+                <li class="servicePanelPlaceholder servicePanel relative">
+                    <h2 class="serviceTitle absolute">Découvrez <br/>le bassin et ses produits phares</h2>
+                    <div class="background absolute"></div>
+                </li>
+                <li class="servicePanel relative">
+                    <div class="coreBasic absolute">
+                        <h3 class="serviceTitle absolute">Privatisation Journée</h3>
+                        <div class="prix absolute">À partir de 900 €</div>
+                        <button class="openService absolute brand--primary--button pointer">C'est pour moi !<img class="arrow" src="/assets/svg/arrow-right.svg" alt="sélectionner"></a>
+                    </div>
+                    <div class="coreComplete absolute">
+                        <h3 class="serviceTitle absolute">Privatisation Journée</h3>
+                        <p class="desc absolute">Le Bassin n'aura plus de secret pour vous. Une balade que vous pourrez adapter à vos envies.</p>
+                        <div class="prix absolute">À partir de 900 €</div>
+                        <div class="descAlt absolute">Jusqu’à 12 personnes</div>
+                        <button class="openService absolute brand--primary--button pointer">C'est pour moi !<img class="arrow absolute" src="/assets/svg/arrow-right.svg" alt="sélectionner"></a>
+                    </div>
+                    <div class="backgroundCropper absolute">
+                        <img class="absolute" src="https://source.unsplash.com/1920x1080/?beach" alt="Background" />
+                    </div>
+                </li>
+                <li class="servicePanel relative">
+                    <div class="coreBasic absolute">
+                        <h3 class="serviceTitle absolute">Privatisation Journée</h3>
+                        <div class="prix absolute">À partir de 900 €</div>
+                        <button class="openService absolute brand--primary--button pointer">C'est pour moi !<img class="arrow" src="/assets/svg/arrow-right.svg" alt="sélectionner"></a>
+                    </div>
+                    <div class="coreComplete absolute">
+                        <h3 class="serviceTitle absolute">Privatisation Journée</h3>
+                        <p class="desc absolute">Le Bassin n'aura plus de secret pour vous. Une balade que vous pourrez adapter à vos envies.</p>
+                        <div class="prix absolute">À partir de 900 €</div>
+                        <div class="descAlt absolute">Jusqu’à 12 personnes</div>
+                        <button class="openService absolute brand--primary--button pointer">C'est pour moi !<img class="arrow absolute" src="/assets/svg/arrow-right.svg" alt="sélectionner"></a>
+                    </div>
+                    <div class="backgroundCropper absolute">
+                        <img class="absolute" src="https://source.unsplash.com/1920x1080/?beach" alt="Background" />
+                    </div>
+                </li>
+                <li class="servicePanel relative">
+                    <div class="coreBasic absolute">
+                        <h3 class="serviceTitle absolute">Privatisation Journée</h3>
+                        <div class="prix absolute">À partir de 900 €</div>
+                        <button class="openService absolute brand--primary--button pointer">C'est pour moi !<img class="arrow" src="/assets/svg/arrow-right.svg" alt="sélectionner"></a>
+                    </div>
+                    <div class="coreComplete absolute">
+                        <h3 class="serviceTitle absolute">Privatisation Journée</h3>
+                        <p class="desc absolute">Le Bassin n'aura plus de secret pour vous. Une balade que vous pourrez adapter à vos envies.</p>
+                        <div class="prix absolute">À partir de 900 €</div>
+                        <div class="descAlt absolute">Jusqu’à 12 personnes</div>
+                        <button class="openService absolute brand--primary--button pointer">C'est pour moi !<img class="arrow absolute" src="/assets/svg/arrow-right.svg" alt="sélectionner"></a>
+                    </div>
+                    <div class="backgroundCropper absolute">
+                        <img class="absolute" src="https://source.unsplash.com/1920x1080/?beach" alt="Background" />
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <script src="/js/datepicker.min.js"></script>
+        <script src="/js/datepicker.fr.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+        <script>
+            function removeElementsByClass(className){
+                const elements = document.getElementsByClassName(className);
+                while(elements.length > 0){
+                    elements[0].parentNode.removeChild(elements[0]);
+                }
+            }
+            function computeSlideCount(){
+                if (window.slider) window.slider.destroy();
+                if (document.getElementsByClassName('noCardContainer').length > 0) removeElementsByClass('noCardContainer')
+
+
+                const count = (Math.floor((window.innerWidth) / 300) < 0) ? 0 : Math.floor((window.innerWidth) / 300);
+                console.log('count', count);
+                const container = document.getElementsByClassName('cards')[0];
+                for (let i = 0; i < count; i += 1) {
+                    container.insertAdjacentHTML('beforeend', `<li class="noCardContainer"><div class="nocard"></div></li>`);
+                }
+                window.slider = tns({
+                    container: '.cards',
+                    items: 4,
+                    mode: 'carousel',
+                    axis: 'horizontal',
+                    gutter: 40,
+                    fixedWidth: 300,
+                    controls: false,
+                    nav: false,
+                    autoplay: false,
+                    speed: 100,
+                    loop: false,
+                    mouseDrag: true,
+                    swipeAngle: 80,
+                    preventScrollOnTouch: 'auto',
+                    slideBy: 1,
+                });
+                window.slider.events.on('indexChanged', (info, eventName) => {
+                    if (window.servicesData.length < info.index) return window.slider.goTo(window.servicesData.length);
+
+                    const element = document.getElementsByClassName('open')[0];
+                    if (element) element.classList.remove('open');
+
+                    if (info.index === 0) {
+                        const sliderBackground = document.getElementsByClassName('sliderBackground')[0];
+                        sliderBackground.setAttribute('src', 'https://source.unsplash.com/1920x1080/?beach,landscape');
+                        sliderBackground.setAttribute('alt', 'homepage background');
+                        const pageTitle = document.getElementsByClassName('pageTitle')[0];
+                        pageTitle.classList.add('fadeout');
+                        window.setTimeout(() => {
+                            pageTitle.innerHTML = 'Faites l’expérience du bassin d’arcachon, en Vedette';
+                            pageTitle.classList.remove('fadeout');
+                        }, 200);
+                        return true;
+                    }
+
+                    const cardNumber = info.index;
+                    const active = document.getElementsByClassName('card')[cardNumber];
+                    active.classList.add('open');
+
+                    const service = window.servicesData[info.index - 1];
+                    const sliderBackground = document.getElementsByClassName('sliderBackground')[0];
+
+                    sliderBackground.setAttribute('src', service.background.src);
+                    sliderBackground.setAttribute('alt', service.background.alt);
+
+                    const pageTitle = document.getElementsByClassName('pageTitle')[0];
+                    pageTitle.classList.add('fadeout');
+                    window.setTimeout(() => {
+                        pageTitle.innerHTML = service.catchPhrase;
+                        pageTitle.classList.remove('fadeout');
+                    }, 200);
+                });
+            }
+            (() => {
+                window.servicesData = [
+                    {
+                        name: `Privatisation Journée`,
+                        information: `À partir de 900 €`,
+                        thumbnail: {
+                            src: `https://source.unsplash.com/300x380/?beach`,
+                            alt: `thumbnail`,
+                        },
+                        background: {
+                            src: `https://source.unsplash.com/1920x1080/?beach`,
+                            alt: `Background`,
+                        },
+                        catchPhrase: `Privatisez une journée pour vous et vos proches !`,
+                        pricing: `À partir de 900 €`,
+                        description: `Le Bassin n'aura plus de secret pour vous. Une balade que vous pourrez adapter à vos envies.`,
+                    },
+                    {
+                        name: `Entreprises et collectivités`,
+                        information: `Composez votre balade`,
+                        thumbnail: {
+                            src: `https://source.unsplash.com/300x380/?landscape`,
+                            alt: `thumbnail`,
+                        },
+                        background: {
+                            src: `https://source.unsplash.com/1920x1080/?landscape`,
+                            alt: `Background`,
+                        },
+                        catchPhrase: `Profitez d\'une balade au coeur de notre région !`,
+                        pricing: `À partir de 900 €`,
+                        description: `Le Bassin n'aura plus de secret pour vous. Une balade que vous pourrez adapter à vos envies.`,
+                        type: `walk`,
+                    },
+                    {
+                        name: `Sunset`,
+                        information: `À partir de 1200 €`,
+                        thumbnail: {
+                            src: `https://source.unsplash.com/300x380/?beach,landscape`,
+                            alt: `thumbnail`,
+                        },
+                        background: {
+                            src: `https://source.unsplash.com/1920x1080/?beach,landscape`,
+                            alt: `Background`,
+                        },
+                        catchPhrase: `Respirez un air nouveau et installez vous !`,
+                        pricing: `À partir de 1200 €`,
+                        description: `Le Bassin n'aura plus de secret pour vous. Une balade que vous pourrez adapter à vos envies.`,
+                    },
+                ];
+                const container = document.getElementsByClassName('cards')[0];
+                window.servicesData.forEach(service => {
+                    const htmlCard = `
+                        <li>
+                            <div class="card">
+                                <div class="basic">
+                                    <img class="background" src="${service.thumbnail.src}" alt="${service.thumbnail.alt}" />
+                                    <div class="core">
+                                        <h3 class="serviceName">${service.name}</h3>
+                                        <span class="additional">${service.information}</span>
+                                        <button class="brand--primary--button pointer">Choisir une date<img class="arrow" src="/assets/svg/arrow-right.svg" alt="choisir une date"></button>
+                                    </div>
+                                </div>
+                                <div class="complementary">
+                                    <span class="serviceName">${service.name}</span>
+                                    <p class="description">${service.description}</p>
+                                    <span class="additional">${service.pricing}</span>
+                                    ${ (service.type === 'walk') ? '<span class="personsCount">Jusqu’à 12 personnes <img class="persons" src="/assets/svg/user.svg" alt="icon" /></span>' : ''}
+                                    <button class="openService pointer">Je prends<img class="arrow" src="/assets/svg/arrow-right.svg" alt="sélectionner"></a>
+                                </div>
+                            </div>
+                        </li>
+                    `;
+                    //TODO: BLUE ARROW
+                    container.insertAdjacentHTML('beforeend', htmlCard);
+                });
+
+                window.addEventListener("resize", computeSlideCount);
+                computeSlideCount();
+
+                const selectPersons = document.getElementsByClassName('persons')[0];
+
+                selectPersons.addEventListener('input', (event) => {
+                    if (event.target.value !== "plus ...") return true;
+                    const parent = selectPersons.parentNode
+                    removeElementsByClass('persons');
+                    const input = document.createElement('input');
+                    input.setAttribute('type', 'number');
+                    input.setAttribute('name', 'persons');
+                    input.setAttribute('placeholder', 'Précisez le nombre ...');
+                    parent.insertBefore(input, parent.children[1]);
+                }, false);
+
+                const selectServices = document.getElementsByClassName('services')[0];
+
+                window.servicesData.forEach(service => {
+                    const option = document.createElement("option");
+                    option.value = service.name;
+                    option.appendChild(document.createTextNode(service.name));
+                    selectServices.appendChild(option);
+                });
+
+                const book = document.getElementsByClassName('openDiscover')[0];
+                book.addEventListener('click', (e) => {
+                    const form = document.getElementsByClassName('serviceSearch')[0];
+                    if (form.classList.contains('openDiscover')) return true;
+                    form.classList.add('openDiscover');
+                    const book = document.getElementsByClassName('openDiscover')[0];
+                    e.preventDefault();
+                })
+            })();
+        </script>
+    </body>
+</html>

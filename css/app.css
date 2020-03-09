@@ -1,0 +1,865 @@
+button.brand--primary--button {
+    background-color: #14b1bc;
+    color: #fff;
+    border: none;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+}
+
+header.mainHeader {
+    width: 100vw;
+    position: fixed;
+    z-index: 95;
+    min-height: 100px;
+}
+
+div.headerBackground {
+    background-color: rgba(120, 120, 120, 0.8);
+    z-index: 1;
+    display: block;
+    width: 100vw;
+    position: fixed;
+    min-height: 100px;
+}
+
+header.mainHeader>nav.flex {
+    min-height: 100px;
+    width: 100%;
+    padding: 0 10%;
+    position: fixed;
+}
+
+header.mainHeader>nav.flex>ul.pageLinks>li {
+    margin: 0 16px;
+}
+header.mainHeader>nav.flex>ul.pageLinks>li>a {
+    position: relative;
+    display: block;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+    color: #fff;
+}
+
+header.mainHeader>nav.flex>ul.pageLinks>li>button.brand--primary--button {
+    padding: 10px 32px;
+}
+
+header.mainHeader>nav.flex>ul.pageLinks>li>a>div.bubble {
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    line-height: 18px;
+    background-color: #14b1bc;
+    font-size: 12px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+}
+
+header.mainHeader>nav.flex>ul.pageLinks>li>a>img.icon {
+    height: 19px;
+    width: 19px;
+    object-fit: contain;
+}
+
+section.slider {
+    z-index: 8;
+    height: auto;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    position: relative;
+}
+
+section.slider::before,
+section.slider::after {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+section.slider::before {
+    background-image: linear-gradient(to bottom, rgba(27, 36, 49, 0) 29%, #101e32);
+}
+
+section.slider::after {
+    background-image: linear-gradient(90deg, rgba(27,36,49,0) 0%, rgba(27,73,99,0) 82%, rgba(27,81,110,0) 82%, rgba(6,13,25,0.8) 100%);
+}
+
+section.slider>img.sliderBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+}
+
+section.slider>div.sliderContainer {
+    position: relative;
+    width: 100%
+}
+
+section.slider>div.sliderContainer>h1.pageTitle.fadeout {
+    opacity: 0;
+}
+
+section.slider>div.sliderContainer>h1.pageTitle {
+    margin: 10px 0;
+    margin-left: 10%;
+    font-family: "Lobster";
+    max-width: 800px;
+    font-size: 52px;
+    font-weight: 800;
+    color: #fff;
+    opacity: 1;
+    transition: opacity .2s ease-in-out;
+}
+
+section.slider>div.sliderContainer>div.relative>form.serviceSearch.openDiscover {
+    height: 60px;
+    width: 800px;
+}
+
+section.slider>div.sliderContainer>div.relative>form.serviceSearch {
+    margin-left: 10%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-flow: row nowrap;
+    height: 60px;
+    width: 200px;
+    direction: rtl;
+    transition: all 0.5s ease-in-out;
+}
+
+section.slider>div.sliderContainer>div.relative>form.serviceSearch>input,
+section.slider>div.sliderContainer>div.relative>form.serviceSearch>select {
+    direction: ltr;
+    height: 60px;
+    width: 200px;
+    background-color: #fff;
+    border: solid 1px #ebebec;
+    padding: 20px;
+    font-family: Roboto;
+    font-size: 16px;
+    color: #2e2e2e;
+}
+
+section.slider>div.sliderContainer>div.relative>form.serviceSearch>button.brand--primary--button {
+    direction: ltr;
+    min-width: 200px;
+    min-height: 60px;
+    background-color: #14b1bc;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    color: #fff;
+}
+
+section.slider>div.sliderContainer #tns1 {
+    width: max-content !important;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+
+section.slider>div.sliderContainer .tns-outer [aria-controls],
+section.slider>div.sliderContainer .tns-outer [data-action] {
+    display: none;
+}
+
+@media screen and (min-width: 340px) {
+    section.slider>div.sliderContainer ul.cards {
+        padding-left: 10%;
+        padding-right: 300px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 340px) {
+    section.slider>div.sliderContainer ul.cards {
+        padding-left: 5%;
+        padding-right: 300px;
+    }
+}
+
+section.slider>div.sliderContainer div.placeholderCard {
+    background-color: #fff;
+}
+
+section.slider>div.sliderContainer div.card {
+    height: 380px;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 20px 0 rgba(20, 23, 45, 0.19);
+    position: relative;
+    overflow: hidden;
+}
+
+section.slider>div.sliderContainer div.card>img.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+section.slider>div.sliderContainer div.card>div.basic,
+section.slider>div.sliderContainer div.card>div.complementary {
+    position: absolute;
+    transition: opacity .4s ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+section.slider>div.sliderContainer div.card.open>div.basic {
+    opacity: 0;
+}
+
+section.slider>div.sliderContainer div.card:not(.open)>div.basic {
+    opacity: 1;
+}
+section.slider>div.sliderContainer div.card.open>div.complementary {
+    opacity: 1;
+}
+section.slider>div.sliderContainer div.card:not(.open)>div.complementary {
+    opacity: 0;
+}
+
+section.slider>div.sliderContainer div.card.placeholderCard>div.basic>div.core {
+    top: 75px;
+}
+
+section.slider>div.sliderContainer div.card>div.basic>div.core {
+    position: absolute;
+    top: 164px;
+    left: 25px;
+    right: 25px;
+    bottom: 30px;
+    z-index: 1;
+}
+
+section.slider>div.sliderContainer div.card.placeholderCard>div.basic>div.core>h2.serviceName {
+    color: #2e2e2e;
+    margin: 0;
+    display: block;
+    height: 62px;
+    font-family: Helvetica;
+    font-size: 24px;
+    line-height: 1.17;
+}
+
+section.slider>div.sliderContainer div.card>div.basic>div.core>h3.serviceName {
+    margin: 0;
+    display: block;
+    height: 62px;
+    font-family: Helvetica;
+    font-size: 24px;
+    line-height: 1.17;
+    color: #fff;
+}
+
+section.slider>div.sliderContainer div.card.placeholderCard>div.basic>div.core>span.additional {
+    display: block;
+    margin-top: 30px;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #2e2e2e;
+}
+
+section.slider>div.sliderContainer div.card>div.basic>div.core>span.additional {
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 0.86;
+    color: #fff;
+}
+
+section.slider>div.sliderContainer div.card>div.basic>div.core>button.brand--primary--button {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 62px;
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 1;
+    text-align: center;
+    color: #fff;
+}
+
+section.slider>div.sliderContainer div.card>div.basic>div.core>button.brand--primary--button>img.arrow {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+section.slider>div.sliderContainer div.card>div.complementary {
+    height: 100%;
+    background-color: #14b1bc;
+    padding: 27px 25px 30px 25px;
+}
+
+section.slider>div.sliderContainer div.card>div.complementary>button.openService {
+    background-color: #fff;
+    color: #14b1bc;
+    border: none;
+    height: 62px;
+    width: 260px;
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    right: 20px;
+    padding: 0;
+    display: block;
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 1;
+    text-align: center;
+}
+
+section.slider>div.sliderContainer div.card>div.complementary>button.openService>img.arrow {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+section.slider>div.sliderContainer div.card>div.complementary>span.serviceName {
+    height: 78px;
+    font-size: 32px;
+    line-height: 1.06;
+    color: #fff;
+    margin: 0;
+    display: block;
+    font-family: Helvetica;
+}
+
+section.slider>div.sliderContainer div.card>div.complementary>p.description {
+    margin: 10px 0 0 0;
+    display: block;
+    width: 250px;
+    height: 54px;
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 1.29;
+    color: #fff;
+}
+
+section.slider>div.sliderContainer div.card>div.complementary>span.additional {
+    display: block;
+    margin-top: 53px;
+    width: 250px;
+    height: 18px;
+    font-family: Roboto;
+    font-size: 20px;
+    line-height: 0.8;
+    color: #fff;
+}
+
+section.slider>div.sliderContainer div.card>div.complementary>span.personsCount {
+    margin-top: 5px;
+    display: block;
+    height: 20px;
+    opacity: 0.6;
+    font-family: Roboto;
+    font-size: 12px;
+    line-height: 1.67;
+    color: #fff;
+}
+
+section.slider>div.sliderContainer div.card>div.complementary>span.personsCount>img.persons {
+    vertical-align: middle;
+    margin-left: 12px;
+    height: 15px;
+    width: 15px;
+}
+
+section.servicesContainer {
+    width: 100%;
+}
+
+section.servicesContainer>ul.servicesList {
+    width: 100%;
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel {
+    height: 530px;
+    width: 80%;
+    margin: 50px 0;
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel.servicePanelPlaceholder>div.background {
+    width: 50%;
+    z-index: -1;
+    background-color: #14b1bc;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel.servicePanelPlaceholder>h2.serviceTitle {
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    max-width: 400px;
+    color: #fff;
+    font-family: "Lobster";
+    font-size: 62px;
+    font-weight: 800;
+    line-height: 0.97;
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel.servicePanelPlaceholder>h2.serviceTitle::before {
+    content: "Beautés et saveurs du bassin d’arcachon";
+    position: absolute;
+    top: -50px;
+    left: 0;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: normal;
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel>div.backgroundCropper {
+    z-index: -1;
+    transition: width .1s ease-in-out;
+    height: 100%;
+    width: 50%;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel:hover>div.backgroundCropper {
+    width: 100%;
+    z-index: -1;
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel>div.backgroundCropper>img.absolute {
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel>div.coreBasic {
+    transition: opacity .2s ease-in-out;
+    opacity: 1;
+    top: 40px;
+    left: 40px;
+    right: 0;
+    bottom: 40px;
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel>div.coreBasic>h3.serviceTitle {
+    margin : 0;
+    max-width: 400px;
+    top: 30px;
+    font-family: "Lobster";
+    font-size: 62px;
+    font-weight: 800;
+    line-height: 0.97;
+    color: #2e2e2e;
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel>div.coreBasic>div.prix {
+    top: 200px;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 0.83;
+    color: #2e2e2e;
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel>div.coreBasic>button.openService {
+    top: 365px;
+    width: 300px;
+    height: 62px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel>div.coreBasic>button.openService>img.arrow {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel:hover>div.coreBasic {
+    opacity: 0;
+    color: #2e2e2e;
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel>div.coreComplete {
+    width: calc(100% - 40px);
+    transition: opacity .2s ease-in-out;
+    opacity: 0;
+    top: 40px;
+    bottom: 40px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel:hover>div.coreComplete {
+    opacity: 1;
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel>div.coreComplete>h3.serviceTitle {
+    margin : 0;
+    max-width: 400px;
+    color: #fff;
+    top: 30px;
+    font-family: "Lobster";
+    font-size: 62px;
+    font-weight: 800;
+    line-height: 0.97;
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel>div.coreComplete>p.desc {
+    margin : 0;
+    max-width: 400px;
+    color: #fff;
+    top: 175px;
+    font-family: Roboto;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel>div.coreComplete>div.prix {
+    margin : 0;
+    max-width: 400px;
+    color: #fff;
+    top: 292px;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 0.83;
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel>div.coreComplete>div.descAlt {
+    margin : 0;
+    max-width: 400px;
+    color: #fff;
+    top: 321px;
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 1.25;
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel>div.coreComplete>button.openService {
+    left: 55px;
+    top: 365px;
+    width: 300px;
+    height: 62px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel>div.coreComplete>button.openService>img.arrow {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even) {
+    float: right;
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even)>div.backgroundCropper {
+    right: 0;
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even)>div.backgroundCropper>img.absolute {
+    right: 0;
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even)>div.coreBasic>h3.serviceTitle {
+    left: 55px;
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even)>div.coreBasic>div.prix {
+    left: 55px;
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even)>div.coreBasic>button.openService {
+    left: 55px;
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even)>div.coreComplete {
+    right: 0;
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even)>div.coreComplete>h3.serviceTitle {
+    left: 55px;
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even)>div.coreComplete>p.desc {
+    left: 55px;
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even)>div.coreComplete>div.prix {
+    left: 55px;
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even)>div.coreComplete>div.descAlt {
+    left: 55px;
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even)>div.coreComplete>button.openService {
+    left: 55px;
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd) {
+    float: left;
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.backgroundCropper {
+    left: 0;
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.backgroundCropper>img.absolute {
+    left: 0;
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreBasic>h3.serviceTitle {
+    left: calc(50% + 55px);
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreBasic>div.prix {
+    left: calc(50% + 55px);
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreBasic>button.openService {
+    left: calc(50% + 55px);
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreComplete {
+    left: 0;
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreComplete>h3.serviceTitle {
+    left: calc(50% + 55px + 40px);
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreComplete>p.desc {
+    left: calc(50% + 55px + 40px);
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreComplete>div.prix {
+    left: calc(50% + 55px + 40px);
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreComplete>div.descAlt {
+    left: calc(50% + 55px + 40px);
+}
+
+section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreComplete>button.openService {
+    left: calc(50% + 55px + 40px);
+}
+
+@media screen and (max-width: 1080px) {
+    section.servicesContainer>ul.servicesList>li.servicePanel,
+    section.servicesContainer>ul.servicesList>li.servicePanel.servicePanelPlaceholder>div.background {
+        width: 100%;
+    }
+
+    section.servicesContainer>ul.servicesList>li.servicePanel.servicePanelPlaceholder>h2.serviceTitle {
+        left: 10%;
+        transform: translateY(-50%);
+    }
+}
+
+@media screen and (max-width: 850px) {
+    section.servicesContainer>ul.servicesList>li.servicePanel:hover>div.coreComplete {
+        opacity: 1;
+    }
+    section.servicesContainer>ul.servicesList>li.servicePanel>div.coreComplete {
+        opacity: 1;
+    }
+    section.servicesContainer>ul.servicesList>li.servicePanel:hover>div.coreBasic {
+        display: none;
+    }
+    section.servicesContainer>ul.servicesList>li.servicePanel>div.coreBasic {
+        display: none;
+    }
+    section.servicesContainer>ul.servicesList>li.servicePanel>div.backgroundCropper {
+        width: 100%;
+    }
+
+    section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreBasic>h3.serviceTitle {
+        left: 10%;
+    }
+
+    section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreBasic>div.prix {
+        left: 10%;
+    }
+
+    section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreBasic>button.openService {
+        left: 10%;
+    }
+
+    section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreComplete {
+        left: 0;
+    }
+
+    section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreComplete>h3.serviceTitle {
+        left: 10%;
+    }
+
+    section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreComplete>p.desc {
+        left: 10%;
+    }
+
+    section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreComplete>div.prix {
+        left: 10%;
+    }
+
+    section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreComplete>div.descAlt {
+        left: 10%;
+    }
+
+    section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreComplete>button.openService {
+        left: 10%;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    section.slider>div.sliderContainer>div.relative>form.serviceSearch.openDiscover {
+        height: 240px;
+        width: 200px;
+    }
+    section.slider>div.sliderContainer>div.relative>form.serviceSearch {
+        flex-direction: column-reverse;
+    }
+    section.slider>div.sliderContainer>h1.pageTitle {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    section.servicesContainer>ul.servicesList>li.servicePanel {
+        margin: 5px 0;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    section.servicesContainer>ul.servicesList>li.servicePanel>div.coreComplete {
+        width: 100%;
+    }
+    section.servicesContainer>ul.servicesList>li.servicePanel>div.coreComplete>h3.serviceTitle {
+        font-size: 40px;
+    }
+
+
+
+
+    section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even)>div.coreBasic>h3.serviceTitle {
+        left: 10px;
+    }
+
+    section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even)>div.coreBasic>div.prix {
+        left: 10px;
+    }
+
+    section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even)>div.coreBasic>button.openService {
+        left: 10px;
+    }
+
+    section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even)>div.coreComplete>h3.serviceTitle {
+        left: 10px;
+    }
+
+    section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even)>div.coreComplete>p.desc {
+        left: 10px;
+    }
+
+    section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even)>div.coreComplete>div.prix {
+        left: 10px;
+    }
+
+    section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even)>div.coreComplete>div.descAlt {
+        left: 10px;
+    }
+
+    section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even)>div.coreComplete>button.openService {
+        left: 10px;
+    }
+
+    section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreBasic>h3.serviceTitle {
+        left: 10px;
+    }
+
+    section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreBasic>div.prix {
+        left: 10px;
+    }
+
+    section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreBasic>button.openService {
+        left: 10px;
+    }
+
+    section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreComplete>h3.serviceTitle {
+        left: 10px;
+    }
+
+    section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreComplete>p.desc {
+        left: 10px;
+    }
+
+    section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreComplete>div.prix {
+        left: 10px;
+    }
+
+    section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreComplete>div.descAlt {
+        left: 10px;
+    }
+
+    section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreComplete>button.openService {
+        left: 10px;
+    }
+}
