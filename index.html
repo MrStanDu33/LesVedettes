@@ -129,7 +129,7 @@ https://github.com/mrstandu33/LesVedettes
             <div class="sliderContainer">
                 <h1 class="pageTitle">Faites l’expérience du bassin d’arcachon, en Vedette</h1>
                 <div class="relative">
-                    <form class="serviceSearch" action="/" method="GET">
+                    <form class="serviceSearch" action="/search.html" method="GET">
                         <button class="openDiscover brand--primary--button pointer">Découvrir !</button>
                         <select id="persons" class="persons" name="persons">
                             <option selected hidden disabled>Nb de personnes</option>
@@ -305,12 +305,6 @@ https://github.com/mrstandu33/LesVedettes
         <script src="/js/datepicker.fr.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
         <script>
-            function removeElementsByClass(className){
-                const elements = document.getElementsByClassName(className);
-                while(elements.length > 0){
-                    elements[0].parentNode.removeChild(elements[0]);
-                }
-            }
             function computeSlideCount(){
                 if (window.slider) window.slider.destroy();
                 if (document.getElementsByClassName('noCardContainer').length > 0) removeElementsByClass('noCardContainer')
@@ -448,7 +442,7 @@ https://github.com/mrstandu33/LesVedettes
                             </div>
                         </li>
                     `;
-                    //TODO: BLUE ARROW
+                    //TODO: add blue arrow
                     container.insertAdjacentHTML('beforeend', htmlCard);
                 });
 
@@ -484,22 +478,22 @@ https://github.com/mrstandu33/LesVedettes
                     form.classList.add('openDiscover');
                     const book = document.getElementsByClassName('openDiscover')[0];
                     e.preventDefault();
-                })
-                document.querySelector('div.altHeader button.brand--primary--button').addEventListener('click', openResaForm);
-                document.querySelector('header.mainHeader button.brand--white--button').addEventListener('click', openResaForm);
-
-                const openResa = document.querySelector('footer button.openResaFooter');
-                openResa.addEventListener('click', openResaForm);
-
-                const goTopBtn = document.querySelector('.back_to_top');
+                });
+                if (document.querySelector('div.altHeader button.brand--primary--button'))
+                    document.querySelector('div.altHeader button.brand--primary--button').addEventListener('click', openResaForm);
+                if (document.querySelector('header.mainHeader button.brand--white--button'))
+                    document.querySelector('header.mainHeader button.brand--white--button').addEventListener('click', openResaForm);
+                if (document.querySelector('footer button.openResaFooter'))
+                    document.querySelector('footer button.openResaFooter').addEventListener('click', openResaForm);
+                if (document.querySelector('.back_to_top'))
+                    document.querySelector('.back_to_top').addEventListener('click', backToTop);
                 window.addEventListener('scroll', trackScroll);
-                goTopBtn.addEventListener('click', backToTop);
 
             })();
             function openResaForm(e) {
                     e.preventDefault();
                     //TODO: replace URL
-                    if (document.querySelector('form.serviceSearch').length === 0) return window.location.href = 'http://vedettes.localhost/';
+                    if (!document.querySelector('form.serviceSearch')) return window.location.href = 'http://vedettes.localhost/';
 
                     window.setTimeout(() => {
                         const form = document.getElementsByClassName('serviceSearch')[0];
@@ -525,6 +519,12 @@ https://github.com/mrstandu33/LesVedettes
                 if (window.pageYOffset > 0) {
                     window.scrollBy(0, -40);
                     setTimeout(backToTop, 0);
+                }
+            }
+            function removeElementsByClass(className){
+                const elements = document.getElementsByClassName(className);
+                while(elements.length > 0){
+                    elements[0].parentNode.removeChild(elements[0]);
                 }
             }
         </script>

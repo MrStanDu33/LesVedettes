@@ -10,24 +10,20 @@ button.brand--white--button {
     border: none;
     padding: 0;
 }
-
 body {
     min-height: 100vh;
 }
-
 div.altHeader {
     width: 100vw;
     z-index: 95;
     min-height: 100px;
     position: absolute;
 }
-
 div.altHeader>nav.flex {
     min-height: 100px;
     width: 100%;
     padding: 0 10%;
 }
-
 div.altHeader>nav.flex>ul.pageLinks>li {
     margin: 0 16px;
 }
@@ -40,11 +36,9 @@ div.altHeader>nav.flex>ul.pageLinks>li>a {
     text-align: center;
     color: #fff;
 }
-
 div.altHeader>nav.flex>ul.pageLinks>li>button.brand--primary--button {
     padding: 10px 32px;
 }
-
 div.altHeader>nav.flex>ul.pageLinks>li>a>div.bubble {
     border-radius: 50%;
     width: 18px;
@@ -58,20 +52,17 @@ div.altHeader>nav.flex>ul.pageLinks>li>a>div.bubble {
     right: 0;
     transform: translate(50%, -50%);
 }
-
 div.altHeader>nav.flex>ul.pageLinks>li>a>img.icon {
     height: 19px;
     width: 19px;
     object-fit: contain;
 }
-
 header.mainHeader {
     position: fixed;
     width: 100vw;
     z-index: 5;
     min-height: 100px;
 }
-
 header.mainHeader>nav.flex {
     background-color: #14b1bc;
     -webkit-box-shadow: 0px 0px 10px 0px rgba(20,177,188,0.5);
@@ -81,7 +72,6 @@ header.mainHeader>nav.flex {
     width: 100%;
     padding: 0 10%;
 }
-
 header.mainHeader>nav.flex>ul.pageLinks>li {
     margin: 0 16px;
 }
@@ -94,11 +84,9 @@ header.mainHeader>nav.flex>ul.pageLinks>li>a {
     text-align: center;
     color: #fff;
 }
-
 header.mainHeader>nav.flex>ul.pageLinks>li>button.brand--white--button {
     padding: 10px 32px;
 }
-
 header.mainHeader>nav.flex>ul.pageLinks>li>a>div.bubble {
     border-radius: 50%;
     width: 18px;
@@ -112,13 +100,11 @@ header.mainHeader>nav.flex>ul.pageLinks>li>a>div.bubble {
     right: 0;
     transform: translate(50%, -50%);
 }
-
 header.mainHeader>nav.flex>ul.pageLinks>li>a>img.icon {
     height: 19px;
     width: 19px;
     object-fit: contain;
 }
-
 section.slider {
     z-index: 8;
     height: auto;
@@ -126,7 +112,6 @@ section.slider {
     padding-bottom: 50px;
     position: relative;
 }
-
 section.slider::before,
 section.slider::after {
     position: absolute;
@@ -141,15 +126,12 @@ section.slider::after {
     opacity: 0.5;
     pointer-events: none;
 }
-
 section.slider::before {
     background-image: linear-gradient(to bottom, rgba(27, 36, 49, 0) 29%, #101e32);
 }
-
 section.slider::after {
     background-image: linear-gradient(90deg, rgba(27,36,49,0) 0%, rgba(27,73,99,0) 82%, rgba(27,81,110,0) 82%, rgba(6,13,25,0.8) 100%);
 }
-
 section.slider>img.sliderBackground {
     position: absolute;
     top: 0;
@@ -162,16 +144,13 @@ section.slider>img.sliderBackground {
     object-position: center;
     z-index: -1;
 }
-
 section.slider>div.sliderContainer {
     position: relative;
     width: 100%
 }
-
 section.slider>div.sliderContainer>h1.pageTitle.fadeout {
     opacity: 0;
 }
-
 section.slider>div.sliderContainer>h1.pageTitle {
     margin: 10px 0;
     margin-left: 10%;
@@ -183,12 +162,10 @@ section.slider>div.sliderContainer>h1.pageTitle {
     opacity: 1;
     transition: opacity .2s ease-in-out;
 }
-
 section.slider>div.sliderContainer>div.relative>form.serviceSearch.openDiscover {
     height: 60px;
     width: 800px;
 }
-
 section.slider>div.sliderContainer>div.relative>form.serviceSearch {
     margin-left: 10%;
     margin-bottom: 20px;
@@ -202,7 +179,6 @@ section.slider>div.sliderContainer>div.relative>form.serviceSearch {
     direction: rtl;
     transition: all 0.5s ease-in-out;
 }
-
 section.slider>div.sliderContainer>div.relative>form.serviceSearch>input,
 section.slider>div.sliderContainer>div.relative>form.serviceSearch>select {
     direction: ltr;
@@ -215,7 +191,6 @@ section.slider>div.sliderContainer>div.relative>form.serviceSearch>select {
     font-size: 16px;
     color: #2e2e2e;
 }
-
 section.slider>div.sliderContainer>div.relative>form.serviceSearch>button.brand--primary--button {
     direction: ltr;
     min-width: 200px;
@@ -227,41 +202,34 @@ section.slider>div.sliderContainer>div.relative>form.serviceSearch>button.brand-
     text-align: center;
     color: #fff;
 }
-
 section.slider>div.sliderContainer #tns1 {
     width: max-content !important;
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Opera and Firefox */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
-
 section.slider>div.sliderContainer .tns-outer [aria-controls],
 section.slider>div.sliderContainer .tns-outer [data-action] {
     display: none;
 }
-
 @media screen and (min-width: 340px) {
     section.slider>div.sliderContainer ul.cards {
         padding-left: 10%;
         padding-right: 300px;
     }
 }
-
 @media screen and (min-width: 320px) and (max-width: 340px) {
     section.slider>div.sliderContainer ul.cards {
         padding-left: 5%;
         padding-right: 300px;
     }
 }
-
 section.slider>div.sliderContainer div.placeholderCard {
     background-color: #fff;
 }
-
 section.slider>div.sliderContainer div.card {
     height: 380px;
     width: 300px;
@@ -271,7 +239,6 @@ section.slider>div.sliderContainer div.card {
     position: relative;
     overflow: hidden;
 }
-
 section.slider>div.sliderContainer div.card>img.background {
     position: absolute;
     top: 0;
@@ -281,7 +248,6 @@ section.slider>div.sliderContainer div.card>img.background {
     width: 100%;
     height: 100%;
 }
-
 section.slider>div.sliderContainer div.card>div.basic,
 section.slider>div.sliderContainer div.card>div.complementary {
     position: absolute;
@@ -291,11 +257,9 @@ section.slider>div.sliderContainer div.card>div.complementary {
     right: 0;
     bottom: 0;
 }
-
 section.slider>div.sliderContainer div.card.open>div.basic {
     opacity: 0;
 }
-
 section.slider>div.sliderContainer div.card:not(.open)>div.basic {
     opacity: 1;
 }
@@ -305,11 +269,9 @@ section.slider>div.sliderContainer div.card.open>div.complementary {
 section.slider>div.sliderContainer div.card:not(.open)>div.complementary {
     opacity: 0;
 }
-
 section.slider>div.sliderContainer div.card.placeholderCard>div.basic>div.core {
     top: 75px;
 }
-
 section.slider>div.sliderContainer div.card>div.basic>div.core {
     position: absolute;
     top: 164px;
@@ -318,7 +280,6 @@ section.slider>div.sliderContainer div.card>div.basic>div.core {
     bottom: 30px;
     z-index: 1;
 }
-
 section.slider>div.sliderContainer div.card.placeholderCard>div.basic>div.core>h2.serviceName {
     color: #2e2e2e;
     margin: 0;
@@ -328,7 +289,6 @@ section.slider>div.sliderContainer div.card.placeholderCard>div.basic>div.core>h
     font-size: 24px;
     line-height: 1.17;
 }
-
 section.slider>div.sliderContainer div.card>div.basic>div.core>h3.serviceName {
     margin: 0;
     display: block;
@@ -338,7 +298,6 @@ section.slider>div.sliderContainer div.card>div.basic>div.core>h3.serviceName {
     line-height: 1.17;
     color: #fff;
 }
-
 section.slider>div.sliderContainer div.card.placeholderCard>div.basic>div.core>span.additional {
     display: block;
     margin-top: 30px;
@@ -346,14 +305,12 @@ section.slider>div.sliderContainer div.card.placeholderCard>div.basic>div.core>s
     line-height: 1.2;
     color: #2e2e2e;
 }
-
 section.slider>div.sliderContainer div.card>div.basic>div.core>span.additional {
     font-family: Roboto;
     font-size: 14px;
     line-height: 0.86;
     color: #fff;
 }
-
 section.slider>div.sliderContainer div.card>div.basic>div.core>button.brand--primary--button {
     display: block;
     position: absolute;
@@ -366,20 +323,17 @@ section.slider>div.sliderContainer div.card>div.basic>div.core>button.brand--pri
     text-align: center;
     color: #fff;
 }
-
 section.slider>div.sliderContainer div.card>div.basic>div.core>button.brand--primary--button>img.arrow {
     position: absolute;
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
 }
-
 section.slider>div.sliderContainer div.card>div.complementary {
     height: 100%;
     background-color: #14b1bc;
     padding: 27px 25px 30px 25px;
 }
-
 section.slider>div.sliderContainer div.card>div.complementary>button.openService {
     background-color: #fff;
     color: #14b1bc;
@@ -397,14 +351,12 @@ section.slider>div.sliderContainer div.card>div.complementary>button.openService
     line-height: 1;
     text-align: center;
 }
-
 section.slider>div.sliderContainer div.card>div.complementary>button.openService>img.arrow {
     position: absolute;
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
 }
-
 section.slider>div.sliderContainer div.card>div.complementary>span.serviceName {
     height: 78px;
     font-size: 32px;
@@ -414,7 +366,6 @@ section.slider>div.sliderContainer div.card>div.complementary>span.serviceName {
     display: block;
     font-family: Helvetica;
 }
-
 section.slider>div.sliderContainer div.card>div.complementary>p.description {
     margin: 10px 0 0 0;
     display: block;
@@ -425,7 +376,6 @@ section.slider>div.sliderContainer div.card>div.complementary>p.description {
     line-height: 1.29;
     color: #fff;
 }
-
 section.slider>div.sliderContainer div.card>div.complementary>span.additional {
     display: block;
     margin-top: 53px;
@@ -436,7 +386,6 @@ section.slider>div.sliderContainer div.card>div.complementary>span.additional {
     line-height: 0.8;
     color: #fff;
 }
-
 section.slider>div.sliderContainer div.card>div.complementary>span.personsCount {
     margin-top: 5px;
     display: block;
@@ -447,28 +396,23 @@ section.slider>div.sliderContainer div.card>div.complementary>span.personsCount 
     line-height: 1.67;
     color: #fff;
 }
-
 section.slider>div.sliderContainer div.card>div.complementary>span.personsCount>img.persons {
     vertical-align: middle;
     margin-left: 12px;
     height: 15px;
     width: 15px;
 }
-
 section.servicesContainer {
     width: 100%;
 }
-
 section.servicesContainer>ul.servicesList {
     width: 100%;
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel {
     height: 530px;
     width: 80%;
     margin: 50px 0;
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel.servicePanelPlaceholder>div.background {
     width: 50%;
     z-index: -1;
@@ -477,7 +421,6 @@ section.servicesContainer>ul.servicesList>li.servicePanel.servicePanelPlaceholde
     bottom: 0;
     overflow: hidden;
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel.servicePanelPlaceholder>h2.serviceTitle {
     top: 50%;
     left: 25%;
@@ -490,7 +433,6 @@ section.servicesContainer>ul.servicesList>li.servicePanel.servicePanelPlaceholde
     font-weight: 800;
     line-height: 0.97;
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel.servicePanelPlaceholder>h2.serviceTitle::before {
     content: "Beautés et saveurs du bassin d’arcachon";
     position: absolute;
@@ -501,7 +443,6 @@ section.servicesContainer>ul.servicesList>li.servicePanel.servicePanelPlaceholde
     font-weight: normal;
     line-height: normal;
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel>div.backgroundCropper {
     z-index: -1;
     transition: width .1s ease-in-out;
@@ -511,12 +452,10 @@ section.servicesContainer>ul.servicesList>li.servicePanel>div.backgroundCropper 
     bottom: 0;
     overflow: hidden;
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel:hover>div.backgroundCropper {
     width: 100%;
     z-index: -1;
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel>div.backgroundCropper>img.absolute {
     top: 0;
     bottom: 0;
@@ -525,7 +464,6 @@ section.servicesContainer>ul.servicesList>li.servicePanel>div.backgroundCropper>
     object-fit: cover;
     object-position: center;
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel>div.coreBasic {
     transition: opacity .2s ease-in-out;
     opacity: 1;
@@ -534,7 +472,6 @@ section.servicesContainer>ul.servicesList>li.servicePanel>div.coreBasic {
     right: 0;
     bottom: 40px;
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel>div.coreBasic>h3.serviceTitle {
     margin : 0;
     max-width: 400px;
@@ -545,7 +482,6 @@ section.servicesContainer>ul.servicesList>li.servicePanel>div.coreBasic>h3.servi
     line-height: 0.97;
     color: #2e2e2e;
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel>div.coreBasic>div.prix {
     top: 200px;
     font-family: Roboto;
@@ -554,7 +490,6 @@ section.servicesContainer>ul.servicesList>li.servicePanel>div.coreBasic>div.prix
     line-height: 0.83;
     color: #2e2e2e;
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel>div.coreBasic>button.openService {
     top: 365px;
     width: 300px;
@@ -567,19 +502,16 @@ section.servicesContainer>ul.servicesList>li.servicePanel>div.coreBasic>button.o
     color: #fff;
     position: relative;
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel>div.coreBasic>button.openService>img.arrow {
     position: absolute;
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel:hover>div.coreBasic {
     opacity: 0;
     color: #2e2e2e;
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel>div.coreComplete {
     width: calc(100% - 40px);
     transition: opacity .2s ease-in-out;
@@ -589,11 +521,9 @@ section.servicesContainer>ul.servicesList>li.servicePanel>div.coreComplete {
     background-color: rgba(0, 0, 0, 0.1);
     color: #fff;
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel:hover>div.coreComplete {
     opacity: 1;
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel>div.coreComplete>h3.serviceTitle {
     margin : 0;
     max-width: 400px;
@@ -604,7 +534,6 @@ section.servicesContainer>ul.servicesList>li.servicePanel>div.coreComplete>h3.se
     font-weight: 800;
     line-height: 0.97;
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel>div.coreComplete>p.desc {
     margin : 0;
     max-width: 400px;
@@ -614,7 +543,6 @@ section.servicesContainer>ul.servicesList>li.servicePanel>div.coreComplete>p.des
     font-size: 20px;
     line-height: 1.2;
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel>div.coreComplete>div.prix {
     margin : 0;
     max-width: 400px;
@@ -625,7 +553,6 @@ section.servicesContainer>ul.servicesList>li.servicePanel>div.coreComplete>div.p
     font-weight: bold;
     line-height: 0.83;
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel>div.coreComplete>div.descAlt {
     margin : 0;
     max-width: 400px;
@@ -635,7 +562,6 @@ section.servicesContainer>ul.servicesList>li.servicePanel>div.coreComplete>div.d
     font-size: 16px;
     line-height: 1.25;
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel>div.coreComplete>button.openService {
     left: 55px;
     top: 365px;
@@ -649,122 +575,94 @@ section.servicesContainer>ul.servicesList>li.servicePanel>div.coreComplete>butto
     color: #fff;
     position: relative;
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel>div.coreComplete>button.openService>img.arrow {
     position: absolute;
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even) {
     float: right;
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even)>div.backgroundCropper {
     right: 0;
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even)>div.backgroundCropper>img.absolute {
     right: 0;
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even)>div.coreBasic>h3.serviceTitle {
     left: 55px;
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even)>div.coreBasic>div.prix {
     left: 55px;
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even)>div.coreBasic>button.openService {
     left: 55px;
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even)>div.coreComplete {
     right: 0;
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even)>div.coreComplete>h3.serviceTitle {
     left: 55px;
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even)>div.coreComplete>p.desc {
     left: 55px;
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even)>div.coreComplete>div.prix {
     left: 55px;
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even)>div.coreComplete>div.descAlt {
     left: 55px;
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even)>div.coreComplete>button.openService {
     left: 55px;
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd) {
     float: left;
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.backgroundCropper {
     left: 0;
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.backgroundCropper>img.absolute {
     left: 0;
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreBasic>h3.serviceTitle {
     left: calc(50% + 55px);
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreBasic>div.prix {
     left: calc(50% + 55px);
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreBasic>button.openService {
     left: calc(50% + 55px);
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreComplete {
     left: 0;
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreComplete>h3.serviceTitle {
     left: calc(50% + 55px + 40px);
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreComplete>p.desc {
     left: calc(50% + 55px + 40px);
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreComplete>div.prix {
     left: calc(50% + 55px + 40px);
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreComplete>div.descAlt {
     left: calc(50% + 55px + 40px);
 }
-
 section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreComplete>button.openService {
     left: calc(50% + 55px + 40px);
 }
-
 @media screen and (max-width: 1080px) {
     section.servicesContainer>ul.servicesList>li.servicePanel,
     section.servicesContainer>ul.servicesList>li.servicePanel.servicePanelPlaceholder>div.background {
         width: 100%;
     }
-
     section.servicesContainer>ul.servicesList>li.servicePanel.servicePanelPlaceholder>h2.serviceTitle {
         left: 10%;
         transform: translateY(-50%);
     }
 }
-
 @media screen and (max-width: 850px) {
     section.servicesContainer>ul.servicesList>li.servicePanel:hover>div.coreComplete {
         opacity: 1;
@@ -781,44 +679,34 @@ section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.cor
     section.servicesContainer>ul.servicesList>li.servicePanel>div.backgroundCropper {
         width: 100%;
     }
-
     section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreBasic>h3.serviceTitle {
         left: 10%;
     }
-
     section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreBasic>div.prix {
         left: 10%;
     }
-
     section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreBasic>button.openService {
         left: 10%;
     }
-
     section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreComplete {
         left: 0;
     }
-
     section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreComplete>h3.serviceTitle {
         left: 10%;
     }
-
     section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreComplete>p.desc {
         left: 10%;
     }
-
     section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreComplete>div.prix {
         left: 10%;
     }
-
     section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreComplete>div.descAlt {
         left: 10%;
     }
-
     section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreComplete>button.openService {
         left: 10%;
     }
 }
-
 @media screen and (max-width: 910px) {
     section.slider>div.sliderContainer>div.relative>form.serviceSearch.openDiscover {
         height: 240px;
@@ -831,13 +719,11 @@ section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.cor
         font-size: 40px;
     }
 }
-
 @media screen and (max-width: 500px) {
     section.servicesContainer>ul.servicesList>li.servicePanel {
         margin: 5px 0;
     }
 }
-
 @media screen and (max-width: 420px) {
     section.servicesContainer>ul.servicesList>li.servicePanel>div.coreComplete {
         width: 100%;
@@ -845,81 +731,250 @@ section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.cor
     section.servicesContainer>ul.servicesList>li.servicePanel>div.coreComplete>h3.serviceTitle {
         font-size: 40px;
     }
-
-
-
-
     section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even)>div.coreBasic>h3.serviceTitle {
         left: 10px;
     }
-
     section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even)>div.coreBasic>div.prix {
         left: 10px;
     }
-
     section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even)>div.coreBasic>button.openService {
         left: 10px;
     }
-
     section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even)>div.coreComplete>h3.serviceTitle {
         left: 10px;
     }
-
     section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even)>div.coreComplete>p.desc {
         left: 10px;
     }
-
     section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even)>div.coreComplete>div.prix {
         left: 10px;
     }
-
     section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even)>div.coreComplete>div.descAlt {
         left: 10px;
     }
-
     section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(even)>div.coreComplete>button.openService {
         left: 10px;
     }
-
     section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreBasic>h3.serviceTitle {
         left: 10px;
     }
-
     section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreBasic>div.prix {
         left: 10px;
     }
-
     section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreBasic>button.openService {
         left: 10px;
     }
-
     section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreComplete>h3.serviceTitle {
         left: 10px;
     }
-
     section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreComplete>p.desc {
         left: 10px;
     }
-
     section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreComplete>div.prix {
         left: 10px;
     }
-
     section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreComplete>div.descAlt {
         left: 10px;
     }
-
     section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.coreComplete>button.openService {
         left: 10px;
     }
 }
+section.searchResultContainer {
+    padding-top: 100px;
+}
+section.searchResultContainer>h1.searchResults {
+    max-width: 340px;
+    margin: 64px auto 0 auto;
+    font-family: "Lobster";
+    font-size: 36px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #2e2e2e;
+}
+section.searchResultContainer>div.searchExplanation {
+    margin: 20px auto;
+    max-width: 480px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+}
+section.searchResultContainer>nav {
+    max-width: 520px;
+}
+section.searchResultContainer>nav>button {
+    border: none;
+    background: none;
+    width: 36px;
+    height: 36px;
+}
+section.searchResultContainer>nav>button:focus {
+    outline: none;
+}
+section.searchResultContainer>nav>div.currentDay {
+    width: 230px;
+    height: 20px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #2e2e2e;
+}
+section.searchResultContainer>ul.searchResults {
+    margin: 80px auto 140px auto;
+    max-width: 920px;
+    width: 100%;
+}
+section.searchResultContainer>ul.searchResults>li.result {
+    padding: 25px 30px 30px 30px;
+    background-color: #fff;
+    margin-top: 20px;
+    border: solid 1px #ebebec;
+}
+section.searchResultContainer>ul.searchResults>li.result.recommended {
+    border: solid 2px #14b1bc;
+}
+section.searchResultContainer>ul.searchResults>li.result.unavailable {
+    background-color: #ebebec;
+}
+section.searchResultContainer>ul.searchResults>li.result>img {
+    background-color: #14b1bc;
+    width: 300px;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+}
+section.searchResultContainer>ul.searchResults>li.result.unavailable>img {
+    opacity: .5;
+}
+section.searchResultContainer>ul.searchResults>li.result>div.core {
+    flex: 1 0 0;
+    padding: 12px 0 0 40px;
+    align-items: flex-end;
+}
+section.searchResultContainer>ul.searchResults>li.result>div.core>div.details {
+    width: 250px;
+    height: 100%;
+}
+section.searchResultContainer>ul.searchResults>li.result>div.core>div.details>div.type {
+    font-family: Roboto;
+    font-size: 12px;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.5);
+}
+section.searchResultContainer>ul.searchResults>li.result>div.core>div.details>h2.serviceName {
+    margin-top: 16px;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 0.9;
+    color: #2e2e2e;
+}
+section.searchResultContainer>ul.searchResults>li.result>div.core>div.details>p.serviceDesc {
+    margin-top: 10px;
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 1.43;
+    color: rgba(0, 0, 0, 0.5);
+}
+section.searchResultContainer>ul.searchResults>li.result>div.core>div.details>div.pricing {
+    margin-top: 36px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    color: #2e2e2e;
+}
+section.searchResultContainer>ul.searchResults>li.result>div.core>div.details>div.maxPersons {
+    margin-top: 10px;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.67;
+    color: rgba(0, 0, 0, 0.3);
+}
+section.searchResultContainer>ul.searchResults>li.result>div.core>div.CTABlock>div.status {
+    font-family: Roboto;
+    font-size: 17px;
+    line-height: 1;
+    color: #14b1bc;
+    margin-bottom: 16px;
+}
+section.searchResultContainer>ul.searchResults>li.result>div.core>div.CTABlock>button.openService {
+    width: 220px;
+    height: 62px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+section.searchResultContainer>ul.searchResults>li.result>div.core>div.CTABlock>button.openService>img.arrow {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+section.searchResultContainer>ul.searchResults>li.result.unavailable>div.core>div.details>div.type,
+section.searchResultContainer>ul.searchResults>li.result.unavailable>div.core>div.details>h2.serviceName,
+section.searchResultContainer>ul.searchResults>li.result.unavailable>div.core>div.details>p.serviceDesc,
+section.searchResultContainer>ul.searchResults>li.result.unavailable>div.core>div.details>div.pricing,
+section.searchResultContainer>ul.searchResults>li.result.unavailable>div.core>div.details>div.maxPersons,
+section.searchResultContainer>ul.searchResults>li.result.unavailable>div.core>div.CTABlock>div.status {
+    color: rgba(0, 0, 0, 0.3);
+}
+section.searchResultContainer>ul.searchResults>li.result.unavailable>div.core>div.CTABlock>button.openService {
+    background-color: #2e7074;
+}
+@media screen and (max-width: 880px) {
+    section.searchResultContainer>ul.searchResults>li.result {
+        padding: 0 0 10px 0;
+        margin: 10px auto;
+        flex-direction: column;
+        width: 300px;
+    }
+    section.searchResultContainer>ul.searchResults>li.result>img {
+        width: 100%;
+    }
+    section.searchResultContainer>ul.searchResults>li.result>div.core>div.CTABlock>div.status {
+        margin-top: 10px;
+        text-align: left;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 footer {
     clear: both;
     background-color: #1a1a1a;
     padding: 100px 10px 40px 10px;
 }
-
 footer>ul.core>li {
     width: 160px;
 
@@ -931,7 +986,6 @@ footer>ul.core>li>div.footerTitle {
     line-height: 1.24;
     color: #fff;
 }
-
 footer>ul.core>li>button.brand--primary--button {
     margin-top: 20px;
     width: 160px;
@@ -942,15 +996,12 @@ footer>ul.core>li>button.brand--primary--button {
     line-height: 1.57;
     text-align: center;
 }
-
 footer>ul.core>li>ul.footerContent {
     margin-top: 20px;
 }
-
 footer>ul.core>li>ul.footerContent>li {
     margin: 10px;
 }
-
 footer>ul.core>li>ul.footerContent>li {
     opacity: 0.5;
     font-family: 'Open Sans';
@@ -958,11 +1009,9 @@ footer>ul.core>li>ul.footerContent>li {
     line-height: 1.63;
     color: #fff;
 }
-
 footer>ul.core>li.socials {
     width: 270px;
 }
-
 footer>div.bottom {
     margin: 70px auto 0 auto;
     width: 77%;
@@ -974,7 +1023,6 @@ footer>div.bottom {
     color: #fff;
     padding: 35px 0;
 }
-
 @media screen and (min-width: 470px) and (max-width: 800px) {
     footer>ul.core {
         display: grid;
@@ -982,7 +1030,6 @@ footer>div.bottom {
         grid-gap: 50px 0;
     }
 }
-
 @media screen and (max-width: 470px) {
     footer>ul.core {
         display: grid;
@@ -990,7 +1037,6 @@ footer>div.bottom {
         grid-gap: 50px 0;
     }
 }
-
 .back_to_top {
     position: fixed;
     bottom: 80px;
@@ -1005,12 +1051,10 @@ footer>div.bottom {
     cursor: pointer;
     border-radius: 2px;
     display: none;
-  }
-
-  .back_to_top:hover {
+}
+.back_to_top:hover {
     background: #e9ebec;
-  }
-
-  .back_to_top-show {
+}
+.back_to_top-show {
     display: block;
-  }
+}
