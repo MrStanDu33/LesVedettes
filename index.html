@@ -444,8 +444,44 @@ https://github.com/mrstandu33/LesVedettes
                     const book = document.getElementsByClassName('openDiscover')[0];
                     e.preventDefault();
                 })
-            })();
+                const openResa = document.querySelector('footer button.openResaFooter');
+                openResa.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    //TODO: replace URL
+                    if (document.querySelector('form.serviceSearch').length === 0) return window.location.href = 'http://vedettes.localhost/';
 
+                    window.setTimeout(() => {
+                        const form = document.getElementsByClassName('serviceSearch')[0];
+                        if (form.classList.contains('openDiscover')) return true;
+                        form.classList.add('openDiscover');
+                        const book = document.getElementsByClassName('openDiscover')[0];
+                    }, 300);
+                    return backToTop();
+                });
+
+                const goTopBtn = document.querySelector('.back_to_top');
+                window.addEventListener('scroll', trackScroll);
+                goTopBtn.addEventListener('click', backToTop);
+
+            })();
+            function trackScroll() {
+                const goTopBtn = document.querySelector('.back_to_top');
+                var scrolled = window.pageYOffset;
+                var coords = document.documentElement.clientHeight;
+                if (scrolled > coords) {
+                    goTopBtn.classList.add('back_to_top-show');
+                }
+                if (scrolled < coords) {
+                    goTopBtn.classList.remove('back_to_top-show');
+                }
+            }
+
+            function backToTop() {
+                if (window.pageYOffset > 0) {
+                    window.scrollBy(0, -40);
+                    setTimeout(backToTop, 0);
+                }
+            }
         </script>
     </body>
 </html>
