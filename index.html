@@ -182,57 +182,6 @@ https://github.com/mrstandu33/LesVedettes
                     <h2 class="serviceTitle absolute">Découvrez <br/>le bassin et ses produits phares</h2>
                     <div class="background absolute"></div>
                 </li>
-                <li class="servicePanel relative">
-                    <div class="coreBasic absolute">
-                        <h3 class="serviceTitle absolute">Privatisation Journée</h3>
-                        <div class="prix absolute">À partir de 900 €</div>
-                        <button class="openService absolute brand--primary--button pointer">C'est pour moi !<img class="arrow" src="/assets/svg/arrow-right.svg" alt="sélectionner"></a>
-                    </div>
-                    <div class="coreComplete absolute">
-                        <h3 class="serviceTitle absolute">Privatisation Journée</h3>
-                        <p class="desc absolute">Le Bassin n'aura plus de secret pour vous. Une balade que vous pourrez adapter à vos envies.</p>
-                        <div class="prix absolute">À partir de 900 €</div>
-                        <div class="descAlt absolute">Jusqu’à 12 personnes</div>
-                        <button class="openService absolute brand--primary--button pointer">C'est pour moi !<img class="arrow absolute" src="/assets/svg/arrow-right.svg" alt="sélectionner"></a>
-                    </div>
-                    <div class="backgroundCropper absolute">
-                        <img class="absolute" src="https://source.unsplash.com/1920x1080/?beach" alt="Background" />
-                    </div>
-                </li>
-                <li class="servicePanel relative">
-                    <div class="coreBasic absolute">
-                        <h3 class="serviceTitle absolute">Privatisation Journée</h3>
-                        <div class="prix absolute">À partir de 900 €</div>
-                        <button class="openService absolute brand--primary--button pointer">C'est pour moi !<img class="arrow" src="/assets/svg/arrow-right.svg" alt="sélectionner"></a>
-                    </div>
-                    <div class="coreComplete absolute">
-                        <h3 class="serviceTitle absolute">Privatisation Journée</h3>
-                        <p class="desc absolute">Le Bassin n'aura plus de secret pour vous. Une balade que vous pourrez adapter à vos envies.</p>
-                        <div class="prix absolute">À partir de 900 €</div>
-                        <div class="descAlt absolute">Jusqu’à 12 personnes</div>
-                        <button class="openService absolute brand--primary--button pointer">C'est pour moi !<img class="arrow absolute" src="/assets/svg/arrow-right.svg" alt="sélectionner"></a>
-                    </div>
-                    <div class="backgroundCropper absolute">
-                        <img class="absolute" src="https://source.unsplash.com/1920x1080/?beach" alt="Background" />
-                    </div>
-                </li>
-                <li class="servicePanel relative">
-                    <div class="coreBasic absolute">
-                        <h3 class="serviceTitle absolute">Privatisation Journée</h3>
-                        <div class="prix absolute">À partir de 900 €</div>
-                        <button class="openService absolute brand--primary--button pointer">C'est pour moi !<img class="arrow" src="/assets/svg/arrow-right.svg" alt="sélectionner"></a>
-                    </div>
-                    <div class="coreComplete absolute">
-                        <h3 class="serviceTitle absolute">Privatisation Journée</h3>
-                        <p class="desc absolute">Le Bassin n'aura plus de secret pour vous. Une balade que vous pourrez adapter à vos envies.</p>
-                        <div class="prix absolute">À partir de 900 €</div>
-                        <div class="descAlt absolute">Jusqu’à 12 personnes</div>
-                        <button class="openService absolute brand--primary--button pointer">C'est pour moi !<img class="arrow absolute" src="/assets/svg/arrow-right.svg" alt="sélectionner"></a>
-                    </div>
-                    <div class="backgroundCropper absolute">
-                        <img class="absolute" src="https://source.unsplash.com/1920x1080/?beach" alt="Background" />
-                    </div>
-                </li>
             </ul>
         </section>
         <footer>
@@ -445,7 +394,6 @@ https://github.com/mrstandu33/LesVedettes
                     //TODO: add blue arrow
                     container.insertAdjacentHTML('beforeend', htmlCard);
                 });
-
                 window.addEventListener("resize", computeSlideCount);
                 computeSlideCount();
 
@@ -488,6 +436,31 @@ https://github.com/mrstandu33/LesVedettes
                 if (document.querySelector('.back_to_top'))
                     document.querySelector('.back_to_top').addEventListener('click', backToTop);
                 window.addEventListener('scroll', trackScroll);
+
+                window.servicesData.forEach(service => {
+                    const htmlList = `
+                    <li class="servicePanel relative">
+                        <div class="coreBasic absolute">
+                            <h3 class="serviceTitle absolute">${service.name}</h3>
+                            <div class="prix absolute">${service.pricing}</div>
+                            <button class="openService absolute brand--primary--button pointer">C'est pour moi !<img class="arrow" src="/assets/svg/arrow-right.svg" alt="sélectionner"></a>
+                        </div>
+                        <div class="coreComplete absolute">
+                            <h3 class="serviceTitle absolute">${service.name}</h3>
+                            <p class="desc absolute">${service.description}</p>
+                            <div class="prix absolute">${service.pricing}</div>
+                            ${ (service.type === 'walk') ? '<span class="personsCount">Jusqu’à 12 personnes <img class="persons" src="/assets/svg/user.svg" alt="icon" /></span>' : ''}
+                            <button class="openService absolute brand--primary--button pointer">C'est pour moi !<img class="arrow absolute" src="/assets/svg/arrow-right.svg" alt="sélectionner"></a>
+                        </div>
+                        <div class="backgroundCropper absolute">
+                            <img class="absolute" src="${service.background.src}" alt="${service.background.alt}" />
+                        </div>
+                    </li>
+                    `;
+                    //TODO: add blue arrow
+                    document.querySelector('section.servicesContainer>ul.servicesList').insertAdjacentHTML('beforeend', htmlList);
+                });
+
 
             })();
             function openResaForm(e) {
