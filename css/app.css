@@ -12,6 +12,7 @@ button.brand--white--button {
 }
 body {
     min-height: 100vh;
+    width: 100vw;
 }
 div.altHeader {
     width: 100vw;
@@ -57,6 +58,29 @@ div.altHeader>nav.flex>ul.pageLinks>li>a>img.icon {
     width: 19px;
     object-fit: contain;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 header.mainHeader {
     position: fixed;
     width: 100vw;
@@ -105,12 +129,149 @@ header.mainHeader>nav.flex>ul.pageLinks>li>a>img.icon {
     width: 19px;
     object-fit: contain;
 }
+div.altHeader>nav.flex #trigger,
+div.altHeader>nav.flex #burger,
+div.altHeader>nav.flex #burger:before,
+div.altHeader>nav.flex #burger:after,
+div.altHeader>nav.flex [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    display: none;
+}
+@media screen and (max-width: 1100px) {
+    @keyframes checked-anim {
+        50% {
+            width: 3000px;
+            height: 3000px;
+        }
+        100% {
+            width: 100vw;
+            height: 100vh;
+            border-radius: 0;
+        }
+    }
+    @keyframes not-checked-anim {
+        0% {
+            width: 3000px;
+            height: 3000px;
+        }
+    }
+    div.altHeader>nav.flex {
+        flex-direction: row-reverse;
+    }
+    header.mainHeader {
+        display: none;
+    }
+    div.altHeader>nav.flex li {
+        width: max-content;
+        margin: 75px 0 -55px 56px !important;
+        color: #fff;
+        line-height: 1.8;
+        text-decoration: none;
+        text-transform: none;
+        outline: 0;
+        display: none;
+    }
+    div.altHeader>nav.flex li>a {
+        font: 14pt "Roboto", sans-serif;
+        font-weight: 700 !important;
+        text-align: left !important;
+        text-decoration: none;
+        text-transform: none;
+    }
+    div.altHeader>nav.flex li>a>div.bubble{
+        background-color: #fff !important;
+        color: #ef943d !important;
+    }
+    div.altHeader>nav.flex li button {
+        background-color: #fff;
+        color: #14b1bc;
+    }
+    div.altHeader>nav.flex a:focus {
+        display: block;
+        color: #333;
+        background-color: #eee;
+        transition: all .5s;
+    }
+    div.altHeader>nav.flex #trigger,
+    div.altHeader>nav.flex #burger,
+    div.altHeader>nav.flex #burger:before,
+    div.altHeader>nav.flex #burger:after {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        background: #fff;
+        width: 30px;
+        height: 5px;
+        transition: .2s ease;
+        cursor: pointer;
+        z-index: 1;
+        display: block;
+    }
+    div.altHeader>nav.flex #trigger {
+        height: 25px;
+        background: none;
+    }
+    div.altHeader>nav.flex #burger:before {
+        content: " ";
+        top: 10px;
+        left: 0;
+    }
+    div.altHeader>nav.flex #burger:after {
+        content: " ";
+        top: 20px;
+        left: 0;
+    }
+    #menu-toggle:checked + #trigger + #burger {
+        top: 35px;
+        transform: rotate(180deg);
+        transition: transform .2s ease;
+    }
+
+    #menu-toggle:checked + #trigger + #burger:before {
+        width: 20px;
+        top: -2px;
+        left: 18px;
+        transform: rotate(45deg) translateX(-5px);
+        transition: transform .2s ease;
+    }
+    #menu-toggle:checked + #trigger + #burger:after {
+        width: 20px;
+        top: 2px;
+        left: 18px;
+        transform: rotate(-45deg) translateX(-5px);
+        transition: transform .2s ease;
+    }
+    div.altHeader>nav.flex .pageLinks {
+        background-color: #14b1bc;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0; padding: 0;
+        width: 110px;
+        height: 110px;
+        border-bottom-right-radius: 100%;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+        animation: not-checked-anim .2s both;
+        transition: .2s;
+    }
+    #menu-toggle:checked + #trigger + #burger + .pageLinks {
+        animation: checked-anim 1s ease both;
+    }
+    #menu-toggle:checked + #trigger ~ .pageLinks > li,
+    div.altHeader>nav.flex a {
+        display: block;
+    }
+    div.altHeader>nav.flex [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        display: none;
+    }
+}
 section.slider {
     z-index: 8;
     height: auto;
     padding-top: 100px;
     padding-bottom: 50px;
     position: relative;
+    min-height: 100vh;
 }
 section.slider::before,
 section.slider::after {
@@ -146,7 +307,8 @@ section.slider>img.sliderBackground {
 }
 section.slider>div.sliderContainer {
     position: relative;
-    width: 100%
+    width: 100%;
+    margin-top: 10%;
 }
 section.slider>div.sliderContainer>h1.pageTitle.fadeout {
     opacity: 0;
