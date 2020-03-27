@@ -2,6 +2,18 @@
   Basic Modal Styles
 \**************************/
 
+.modal__container h3 {
+	margin: 0;
+}
+
+.modal__container h4 {
+	margin: 0;
+}
+
+.modal__container strong {
+	margin: 0;
+}
+
 .modal {
 	font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
   }
@@ -94,7 +106,6 @@
 
   .modal__container h4 {
 	font-size: 22px;
-	font-size: min(max(22px, 4vw), 33px);
 	font-weight: 500;
 	font-stretch: normal;
 	font-style: normal;
@@ -108,7 +119,6 @@
 	margin-bottom: 21px;
 	font-family: TRYVesterbro;
 	font-size: 31px;
-	font-size: min(max(31px, 4vw), 46px);
 	font-weight: 800;
 	font-stretch: normal;
 	font-style: normal;
@@ -150,7 +160,7 @@
 	  width:100%;
   }  
 
-  .right-modal img {
+  .right-modal>img {
 	  min-width:100%;
 	  height: auto;
 	  max-height:200px; 
@@ -160,10 +170,9 @@
 
   .right-modal form {
 	  display:flex;
-	  flex-wrap: wrap;
   }
 
-  .right-modal form div {
+  .right-modal form>div {
 	  width: 50%;
 	  margin:20px;
   }
@@ -235,12 +244,21 @@
 
 /* Large devices (desktops, less than 1200px) */
 @media (max-width: 1199.98px) { 
+	.modal__content {
+		padding: 0;
+	}
+
+	.reservation {
+		padding: 10px;
+	}
+
 	.modal__content hr {
 		display:none;
 	}
 
 	.modal__content .right-modal{
 		order: 1;
+		padding: 0,
 	}
 
 	.modal__content .left-modal{
@@ -250,8 +268,20 @@
 	.modal__content>div {
 		width:100%;
 	}
+
+	.right-modal {
+		padding:0;
+	}
+
+	.left-modal .include {
+		flex-direction: column;
+	}
  }
  @media (max-width: 1400px) {
+	.right-modal form {
+		flex-wrap: wrap;
+	}
+
 	.right-modal form div {
 		width: 100%;
 	}
