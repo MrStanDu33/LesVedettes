@@ -84,6 +84,7 @@
 	background-position: center center;
 	border-radius: 50%;
 	padding:0;
+	z-index:100;
   }
 
   .modal__back {
@@ -98,6 +99,7 @@
 	background-position: center center;
 	border-radius: 50%;
 	padding:0;
+	z-index:100;
   }
 
   .modal__content hr{ 
@@ -281,8 +283,8 @@
 		left: 40px;
 	}
 
-	.right-modal img {
-		max-height: 400px;
+	.right-modal-img {
+		max-height: 400px !important;
 	}
 
 	.right-modal .reservation {
