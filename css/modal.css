@@ -2,15 +2,15 @@
   Basic Modal Styles
 \**************************/
 
-.modal__container h3 {
+.modal__content h3 {
 	margin: 0;
 }
 
-.modal__container h4 {
+.modal__content h4 {
 	margin: 0;
 }
 
-.modal__container strong {
+.modal__content strong {
 	margin: 0;
 }
 
@@ -32,15 +32,6 @@
   }
   
   .modal__container {
-	font-family: Roboto;
-	font-size: 12px;
-	font-size: min(max(12px, 4vw), 18px);
-	font-weight: normal;
-	font-stretch: normal;
-	font-style: normal;
-	line-height: 1.67;
-	letter-spacing: normal;
-	color: rgba(0, 0, 0, 0.5);
 	position: relative;
 	background-color: #fff;
 	min-height: 90vh;
@@ -51,12 +42,26 @@
   }
 
   .modal__content {
+	font-family: Roboto;
+	font-size: 12px;
+	font-size: min(max(12px, 4vw), 18px);
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.67;
+	letter-spacing: normal;
+	color: rgba(0, 0, 0, 0.5);
+	padding: 10px;
+	padding-top:100px;
+	display:flex;
+	flex-wrap: wrap;
+  }
+
+  .modal-home {
 	height: 90vh;
 	overflow-y: scroll;
 	overflow-x: hidden;
-	padding: 10px;
-	display:flex;
-	flex-wrap: wrap;
+	padding: 0;
   }
 
   .modal__content>div {
@@ -104,7 +109,7 @@
 	width:1px;       
 }
 
-  .modal__container h4 {
+  .modal__content h4 {
 	font-size: 22px;
 	font-weight: 500;
 	font-stretch: normal;
@@ -114,7 +119,7 @@
 	color: #1a1a1a;
   }
 
-  .modal__container h3 {
+  .modal__content h3 {
 	display:block;
 	margin-bottom: 21px;
 	font-family: TRYVesterbro;
@@ -160,6 +165,10 @@
 	  width:100%;
   }  
 
+  .right-modal h3 {
+	  display:none;
+  }
+
   .right-modal>img {
 	  min-width:100%;
 	  height: auto;
@@ -183,6 +192,7 @@
 	  width:100%;
 	  margin:15px;
 	  min-height: 48px;
+	  line-height: 48px;
 	  padding-left: 20px;
 	  min-width: 215px;
   }
@@ -248,29 +258,52 @@
 		padding: 0;
 	}
 
-	.reservation {
-		padding: 10px;
-	}
-
 	.modal__content hr {
 		display:none;
-	}
-
-	.modal__content .right-modal{
-		order: 1;
-		padding: 0,
-	}
-
-	.modal__content .left-modal{
-		order: 2;
 	}
 
 	.modal__content>div {
 		width:100%;
 	}
 
-	.right-modal {
-		padding:0;
+	.modal__content .right-modal{
+		order: 1;
+		padding: 0;
+		position: relative;
+	}
+
+	.right-modal h3 {
+		display:block;
+		font-size: 54px;
+		color: white;
+		position:absolute;
+		top : 220px;
+		left: 40px;
+	}
+
+	.right-modal img {
+		max-height: 400px;
+	}
+
+	.right-modal .reservation {
+		padding: 10px;
+	}
+
+	.right-modal form>div {
+		margin:0;
+	}
+
+	.right-modal form div input, .right-modal form div select {
+		margin: 15px 0;
+	}
+
+	.modal__content .left-modal{
+		order: 2;
+	}
+
+	.left-modal .include div {
+		width: 100%;
+		margin: 10px 0;
 	}
 
 	.left-modal .include {
