@@ -59,6 +59,95 @@ div.altHeader>nav.flex>ul.pageLinks>li>a>img.icon {
     object-fit: contain;
 }
 
+.gallery{
+	margin:50px;
+	margin-left: 200px;
+	margin-right:0;
+	clear:both;
+	overflow: hidden;
+	position:relative;
+	padding-bottom: 250px;
+}
+
+.gallery>p {
+	margin: 0;
+	padding: 0;
+	width: 365px;
+	font-family: Roboto;
+	font-size: 20px;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.1;
+	letter-spacing: normal;
+	margin-bottom: 20px;
+}
+
+.gallery>h1 {
+	margin: 0;
+	width: 620px;
+	font-family: TRYVesterbro;
+	font-size: 62px;
+	font-weight: 800;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 0.97;
+	letter-spacing: normal;
+	margin-bottom: 50px;
+}
+
+.gallery>.instaBlock{
+	width: 540px;
+	height: 190px;
+	background-color: #14b1bc;
+	margin: 30px;
+	position: absolute;
+    bottom: 0;
+	right: 100px;
+	display:flex;
+	justify-content:space-between;
+	align-items: center;
+}
+
+.gallery>.instaBlock>h3{
+	margin:0;
+	padding:0;
+	font-family: TRYVesterbro;
+	font-size: 52px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	color: white;
+}
+
+.gallery>.instaBlock>p{
+	padding:0;
+	margin:0;
+	font-family: Roboto;
+	font-size: 20px;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	color: white;	
+}
+
+.gallery>.instaBlock>img{
+	height:45px;
+	width:45px;
+	fill:#14b1bc !important;
+	padding:45px;
+	border-radius: 50%;
+	background:white;
+}
+
+.gallery .tns-ovh {
+	overflow: visible;
+}
+
 
 
 

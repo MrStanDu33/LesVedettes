@@ -186,7 +186,34 @@ https://github.com/mrstandu33/LesVedettes
                     <div class="background absolute"></div>
                 </li>
             </ul>
-        </section>
+		</section>
+		<section class="gallery">
+			<p>
+				GALERIE PHOTO
+			</p>
+			<h1>
+				Petit aperçu de ce que vous allez vivre avec les Vedettes
+			</h1>
+			<div class="photos">
+				<ul class="landscapeSlider">
+					<li><img src="https://source.unsplash.com/540x360/?beach" alt="beautiful landscape"></li>
+					<li><img src="https://source.unsplash.com/540x360/?landscape" alt="beautiful landscape"></li>
+					<li><img src="https://source.unsplash.com/540x360/?beach" alt="beautiful landscape"></li>
+					<li><img src="https://source.unsplash.com/540x360/?landscape" alt="beautiful landscape"></li>
+					<li><img src="https://source.unsplash.com/540x360/?beach" alt="beautiful landscape"></li>
+					<li><img src="https://source.unsplash.com/540x360/?landscape" alt="beautiful landscape"></li>
+					<li><img src="https://source.unsplash.com/540x360/?beach" alt="beautiful landscape"></li>
+					<li><img src="https://source.unsplash.com/540x360/?landscape" alt="beautiful landscape"></li>
+				</ul>
+			</div>
+			<div class="instaBlock">
+				<div>
+					<h3>Suivez-nous</h3>
+					<p>Et partagez vos meilleurs moments avec les Vedettes </p>
+				</div>
+				<img src="/assets/svg/instagram.svg" alt="Instagram">
+			</div>
+		</section>
         <footer>
             <ul class="core flex row wrap xSpaceEvenly">
                 <li class="flex column noWrap">
@@ -251,12 +278,29 @@ https://github.com/mrstandu33/LesVedettes
             <div class="bottom">
                 © 2020 Les Vedettes du Bassin. Tous droits réservés. Créé à Bordeaux.
             </div>
-        </footer>
+		</footer>
         <a class="back_to_top" title="Haut de page">&uarr;</a>
         <script src="/js/datepicker.min.js"></script>
         <script src="/js/datepicker.fr.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
         <script>
+			var gallery = tns({
+				container: '.landscapeSlider',
+				items: 3,
+				gutter: 30,
+				slideBy: 'page',
+				controls: false,
+				autoWidth: true,
+				nav: false,
+				autoplay: false,
+				autoplayButtonOutput: false,
+				speed: 600,
+				loop: true,
+				"mouseDrag": true,
+				touch: true,
+				autoplay: true
+			});
+
             function computeSlideCount(){
                 if (window.slider) window.slider.destroy();
                 if (document.getElementsByClassName('noCardContainer').length > 0) removeElementsByClass('noCardContainer')
