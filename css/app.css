@@ -66,7 +66,7 @@ div.altHeader>nav.flex>ul.pageLinks>li>a>img.icon {
 	clear:both;
 	overflow: hidden;
 	position:relative;
-	padding-bottom: 250px;
+	padding-bottom: 280px;
 }
 
 .gallery>p {
@@ -138,10 +138,7 @@ div.altHeader>nav.flex>ul.pageLinks>li>a>img.icon {
 }
 
 .gallery>.instaBlock>.instaLogo{
-	height:45px;
-	width:45px;
-	fill:#14b1bc !important;
-	padding:63px;
+	padding:50px;
 	border-radius: 50%;
 	background:white;
 	margin-right:-23px;
