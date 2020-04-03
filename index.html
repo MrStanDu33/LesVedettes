@@ -207,11 +207,13 @@ https://github.com/mrstandu33/LesVedettes
 				</ul>
 			</div>
 			<div class="instaBlock">
-				<div>
+				<div class="instaBlock--text">
 					<h3>Suivez-nous</h3>
 					<p>Et partagez vos meilleurs moments avec les Vedettes </p>
 				</div>
-				<img src="/assets/svg/instagram.svg" alt="Instagram">
+				<div class="instaLogo">
+					<img width="45px" height:="45px" src="/assets/svg/instagram-big.svg" alt="Instagram">
+				</div>
 			</div>
 		</section>
         <footer>
@@ -286,8 +288,14 @@ https://github.com/mrstandu33/LesVedettes
         <script>
 			var gallery = tns({
 				container: '.landscapeSlider',
-				items: 3,
-				gutter: 30,
+				items: 1,
+				responsive: {
+					500: {
+						gutter: 30,
+						items: 3
+					}
+				},
+				gutter: 0,
 				slideBy: 'page',
 				controls: false,
 				autoWidth: true,
