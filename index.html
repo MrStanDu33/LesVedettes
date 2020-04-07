@@ -28,7 +28,7 @@ https://github.com/mrstandu33/LesVedettes
         <meta name="twitter:title" content="Les Vedettes" />
 
         <link rel="canonical" href="{{ url('/') }}" />
-        <link rel="alternate" hreflang="fr" href="{{ url('/') }}" />
+		<link rel="alternate" hreflang="fr" href="{{ url('/') }}" />
         <link rel="stylesheet" href="/css/framework.css" />
         <link rel="stylesheet" href="/css/app.css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" />
@@ -37,7 +37,8 @@ https://github.com/mrstandu33/LesVedettes
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css">
         <!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.helper.ie8.js"></script><![endif]-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <link href="/css/datepicker.min.css" rel="stylesheet" type="text/css">
+		<link href="/css/datepicker.min.css" rel="stylesheet" type="text/css">
+		<link href="/css/modal.css" rel="stylesheet" type="text/css">
     </head>
     <body>
         <div class="altHeader">
@@ -280,8 +281,9 @@ https://github.com/mrstandu33/LesVedettes
             <div class="bottom">
                 © 2020 Les Vedettes du Bassin. Tous droits réservés. Créé à Bordeaux.
             </div>
-		</footer>
+		    </footer>
         <a class="back_to_top" title="Haut de page">&uarr;</a>
+    		<script  src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
         <script src="/js/datepicker.min.js"></script>
         <script src="/js/datepicker.fr.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
@@ -433,7 +435,7 @@ https://github.com/mrstandu33/LesVedettes
                                     <div class="core">
                                         <h3 class="serviceName">${service.name}</h3>
                                         <span class="additional">${service.information}</span>
-                                        <button class="brand--primary--button pointer">Choisir une date<img class="arrow" src="/assets/svg/arrow-right.svg" alt="choisir une date"></button>
+                                        <button data-micromodal-trigger="modal-1" class="brand--primary--button pointer">Choisir une date<img class="arrow" src="/assets/svg/arrow-right.svg" alt="choisir une date"></button>
                                     </div>
                                 </div>
                                 <div class="complementary">
@@ -441,7 +443,7 @@ https://github.com/mrstandu33/LesVedettes
                                     <p class="description">${service.description}</p>
                                     <span class="additional">${service.pricing}</span>
                                     ${ (service.type === 'walk') ? '<span class="personsCount">Jusqu’à 12 personnes <img class="persons" src="/assets/svg/user.svg" alt="icon" /></span>' : ''}
-                                    <button class="openService pointer">Je prends<img class="arrow" src="/assets/svg/arrow-right.svg" alt="sélectionner"></a>
+                                    <button data-micromodal-trigger="modal-1" class="openService pointer">Je prends<img class="arrow" src="/assets/svg/arrow-right.svg" alt="sélectionner"></a>
                                 </div>
                             </div>
                         </li>
@@ -498,14 +500,14 @@ https://github.com/mrstandu33/LesVedettes
                         <div class="coreBasic absolute">
                             <h3 class="serviceTitle absolute">${service.name}</h3>
                             <div class="prix absolute">${service.pricing}</div>
-                            <button class="openService absolute brand--primary--button pointer">C'est pour moi !<img class="arrow" src="/assets/svg/arrow-right.svg" alt="sélectionner"></a>
+                            <button data-micromodal-trigger="modal-1" class="openService absolute brand--primary--button pointer">C'est pour moi !<img class="arrow" src="/assets/svg/arrow-right.svg" alt="sélectionner"></a>
                         </div>
                         <div class="coreComplete absolute">
                             <h3 class="serviceTitle absolute">${service.name}</h3>
                             <p class="desc absolute">${service.description}</p>
                             <div class="prix absolute">${service.pricing}</div>
                             ${ (service.type === 'walk') ? '<span class="personsCount">Jusqu’à 12 personnes <img class="persons" src="/assets/svg/user.svg" alt="icon" /></span>' : ''}
-                            <button class="openService absolute brand--primary--button pointer">C'est pour moi !<img class="arrow absolute" src="/assets/svg/arrow-right.svg" alt="sélectionner"></a>
+                            <button data-micromodal-trigger="modal-1" class="openService absolute brand--primary--button pointer">C'est pour moi !<img class="arrow absolute" src="/assets/svg/arrow-right.svg" alt="sélectionner"></a>
                         </div>
                         <div class="backgroundCropper absolute">
                             <img class="absolute" src="${service.background.src}" alt="${service.background.alt}" />
@@ -555,6 +557,105 @@ https://github.com/mrstandu33/LesVedettes
                     elements[0].parentNode.removeChild(elements[0]);
                 }
             }
-        </script>
+			window.addEventListener("DOMContentLoaded", (event) => {
+			console.log("DOM entièrement chargé et analysé");
+			MicroModal.init({
+			onShow: modal => console.info(`${modal.id} is shown`), // [1]
+			});
+			});
+
+		</script>
+		<!-- MODAL -->
+		<div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+			<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+				<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+					<button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+					<button class="modal__back" aria-label="Back from modal" data-micromodal-close></button>
+					<main class="modal__content modal-home" id="modal-1-content">
+							<hr>
+							<div class="left-modal">
+								<h4>Informations prestation</h4>
+								<h3>Journée Privatisée</h3>
+								<p>
+									Tous à bord pour une journée exceptionnelle sur le bassin. Découvrez tous les lieux emblématiques du
+									bassin, des villages du fond du bassin au blanc d’Arguin, en passant par l’île aux oiseaux et les
+									cabanes tchanquées.
+									Vous pourrez sur place choisir, en accord avec votre marin, vos lieux de baignade et celui-ci se fera
+									un plaisir d’adapter sa ballade en fonction de vos envies !
+								</p>
+								<strong>INCLUS :</strong>
+								<div class="include">
+									<div>
+										Dégustation huîtres ( 4 par personne )
+									</div>
+									<div>
+										Bouteille de vin blanc ( pour 3 personnes )
+									</div>
+								</div>
+								<strong>INFOS UTILES :</strong>
+								<ul>
+									<li>– Horaires de la journée : départ 10h, retour vers 18h.</li>
+									<li>– Prévoyez pour la journée un maillot et une serviette de bain et de la crème solaire. N’hésitez
+										pas à prendre également un blouson.</li>
+									<li>– À bord, il est d’interdit d’amener boissons, nourriture et animaux de compagnie.</li>
+								</ul>
+								<strong>OPTION FORMULE PRIVILEGE (50,00€/PERS.) :</strong>
+								<ul>
+									<li>– Petit déjeuner (viennoiseries, café, jus de fruits etc.)</li>
+									<li>– Dégustation de 3 variétés huîtres (n°3 normale, spéciale, immersion profonde)</li>
+									<li>– Vin à volonté sur les cuvées : La marée basse, le Blanc de l’étiquette et le rosé Question
+										d’équilibre.</li>
+									<li>– Bouteilles d’eaux minérales et gazeuses</li>
+									<li>– Déjeuner autour de l’huitre servi à bord (Entrée / Plat / Dessert)</li>
+								</ul>
+							</div>
+							<div class="right-modal">
+								<img src="https://source.unsplash.com/750x1080/?beach" alt="fun times">
+								<div class="reservation">
+									<h4>Infos de réservation</h4>
+									<form action="">
+										<div>
+											<select value="Journée Privatisée">
+												<option name="offerType" id="">Journée Privatisée</option>
+											</select>
+											<input type="text" value="17/07/2020" name="date" class="datepicker-here" data-language='fr'
+												data-position='top left'>
+											<select value="9 personnes">
+												<option name="personNumber" id="">9 personnes</option>
+											</select>
+											<select value="Jetée du Grand Piquey">
+												<option name="location" id="">Jetée du Grand Piquey</option>
+											</select>
+											<select value="Formule Privilège">
+												<option name="formula" id="">Formule Privilège</option>
+											</select>
+										</div>
+										<div>
+											<input type="text" placeholder="Jhon Doe" value="Alain Houcque">
+											<input type="text" placeholder="+33(6) 44 55 66 77" value="+33(6) 44 55 66 77">
+											<input type="text" placeholder="jhon.doe@mail.com" value="a.houcque@mail.com">
+											<div class="checkout">
+												<p>
+													<small>Journée Privatisée</small>
+													<small>900€</small>
+												</p>
+												<p>
+													<small>Formule Privilégiée</small>
+													<small>9 x 50€</small>
+												</p>
+												<p class="total">
+													<strong>TOTAL:</strong>
+													<strong>1350€</strong>
+												</p>
+											</div>
+											<button>Réserver</button>
+										</div>
+									</form>
+								</div>
+							</div>
+					</main>
+				</div>
+			</div>
+		</div>
     </body>
 </html>
