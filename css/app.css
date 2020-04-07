@@ -59,27 +59,156 @@ div.altHeader>nav.flex>ul.pageLinks>li>a>img.icon {
     object-fit: contain;
 }
 
+.gallery{
+	margin:50px;
+	margin-left: 200px;
+	margin-right:0;
+	clear:both;
+	overflow: hidden;
+	position:relative;
+	padding-bottom: 280px;
+}
 
+.gallery>p {
+	margin: 0;
+	padding: 0;
+	width: 365px;
+	font-family: Roboto;
+	font-size: 20px;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.1;
+	letter-spacing: normal;
+	margin-bottom: 20px;
+}
 
+.gallery>h1 {
+	max-width: fit-content;
+	margin: 0;
+	width: 620px;
+	font-family: TRYVesterbro;
+	font-size: 62px;
+	font-weight: 800;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 0.97;
+	letter-spacing: normal;
+	margin-bottom: 50px;
+}
 
+.gallery>.instaBlock{
+	width: 540px;
+	height: 190px;
+	background-color: #14b1bc;
+	margin: 30px;
+	position: absolute;
+    bottom: 0;
+	right: 100px;
+	display:flex;
+	justify-content:space-between;
+	align-items: center;
+	overflow: hidden;
+}
 
+.gallery>.instaBlock>h3{
+	margin:0;
+	padding:0;
+	font-family: TRYVesterbro;
+	font-size: 52px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	color: white;
+}
 
+.gallery>.instaBlock>p{
+	padding:0;
+	margin:0;
+	font-family: Roboto;
+	font-size: 20px;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	color: white;	
+}
 
+.gallery>.instaBlock>.instaLogo{
+	padding:50px;
+	border-radius: 50%;
+	background:white;
+	margin-right:-23px;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	position:relative;
+}
 
+.gallery>.instaBlock>.instaLogo>img{
+	z-index: 1;
+}
 
+.gallery>.instaBlock>.instaLogo::before{
+	content: '';
+	display:block;
+	height:350px;
+	width:350px;
+	background:white;
+	border-radius: 50%;
+	position: absolute;
+	opacity: 0.25;
+}
 
+.gallery>.instaBlock>.instaLogo::after{
+	content: '';
+	display:block;
+	height:650px;
+	width:650px;
+	background:white;
+	border-radius: 50%;
+	position: absolute;
+	opacity: 0.25;
+}
 
+.gallery>.instaBlock>.instaBlock--text{
+	margin-left:40px;
+	max-width:318px;
+}
 
+.gallery>.instaBlock h3{
+	margin:0;
+	padding:0;
+	margin-bottom: 8px;
+	font-family: TRYVesterbro;
+	font-size: 52px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	color: white;
+}
 
+.gallery>.instaBlock p{
+	margin:0;
+	padding:0;
+	font-family: Roboto;
+	font-size: 20px;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	color: white;
+}
 
-
-
-
-
-
-
-
-
+.gallery .tns-ovh {
+	overflow: visible;
+}
 
 header.mainHeader {
     position: fixed;
@@ -263,7 +392,10 @@ div.altHeader>nav.flex [type="checkbox"]:not(:checked), [type="checkbox"]:checke
     }
     div.altHeader>nav.flex [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
         display: none;
-    }
+	}
+	.gallery{
+		margin:50px;
+	}
 }
 section.slider {
     z-index: 8;
@@ -882,6 +1014,34 @@ section.servicesContainer>ul.servicesList>li.servicePanel:nth-child(odd)>div.cor
     }
 }
 @media screen and (max-width: 500px) {
+
+	section.gallery{
+		margin:0px;
+	}
+
+	section.gallery > p {
+		margin:5px;
+	}
+
+	section.gallery > h1 {
+		font-size:40px;
+		margin: 0 5px;
+	}
+
+	section.gallery > .instaBlock {
+		width: auto;
+		height: auto;
+		right:0;
+		margin:0;
+		padding:15px;
+		margin-bottom:20px;
+		min-width: -webkit-fill-available;
+	}
+
+	.gallery>.instaBlock>.instaBlock--text {
+		margin-left:0;
+	}
+
     section.servicesContainer>ul.servicesList>li.servicePanel {
         margin: 5px 0;
     }
